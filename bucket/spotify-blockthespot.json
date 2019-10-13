@@ -16,7 +16,7 @@
         "",
         "    $spotify_process | ForEach-Object { Stop-Process -Id $_.Id }",
         "}",
-        "Start-Process -Wait -WindowStyle Hidden cmd \"/c cd /D `\"$($dir)`\" && .\\downgrade.bat\" -Verb RunAs",
+        "Start-Process -Wait -NoNewWindow cmd \"/c cd /D `\"$($dir)`\" && .\\downgrade.bat\" -Verb RunAs",
         "Remove-Item -Path \"$Env:USERPROFILE\\Desktop\\Spotify.lnk\" | Out-Null",
         "(Get-ChildItem -Path \"$Env:APPDATA\\Spotify\") | ForEach-Object { Move-Item -Force -LiteralPath \"$($_.FullName)\" -Destination \"$($dir)\\$($_.Name)\" }",
         "Remove-Item -Path \"$Env:APPDATA\\Spotify\"",
