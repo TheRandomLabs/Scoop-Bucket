@@ -26,7 +26,7 @@
     ],
     "pre_install": [
         "New-Item -Path \"$dir\\accounts.json\" -ItemType File | Out-Null",
-        "New-Item -Path \"$dir\\multimc.cfg\" -ItemType File -Value UpdateChannel=develop | Out-Null",
+        "New-Item -Path \"$dir\\multimc.cfg\" -ItemType File -Value \"IconTheme=pe_colored\\r\\nLaunchMaximized=true\\r\\nUpdateChannel=develop\" | Out-Null",
         "New-Item -Path \"$dir\\notifications.json\" -ItemType File | Out-Null"
     ]
 }
