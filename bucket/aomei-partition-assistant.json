@@ -25,7 +25,7 @@
         "Start-Job {",
         "    do {",
         "        Start-Sleep -Milliseconds 250",
-        "        $partassist_process = Get-Process | Where { $_.name -eq \"PartAssist\" }",
+        "        $partassist_process = Get-Process | Where { $_.name -eq 'PartAssist' }",
         "    } while($partassist_process -eq $null)",
         "",
         "    $partassist_process | ForEach-Object { Stop-Process -Id $_.Id }",

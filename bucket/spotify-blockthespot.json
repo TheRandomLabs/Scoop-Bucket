@@ -7,13 +7,13 @@
     "hash": "e5ac829a0e6c75478d868d925663b1db9aa7d0e316ac53634766ef33c8f763c2",
     "notes": "BlockTheSpot should be installed locally to prevent issues.",
     "pre_install": [
-        "Get-Process -Name \"*Spotify*\" | ForEach-Object { Stop-Process $_ }",
+        "StopProcess -Name Spotify",
         "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify\" -Destination \"$Env:APPDATA\\Spotify.original\" | Out-Null",
         "",
         "Start-Job {",
         "    do {",
         "        Start-Sleep -Milliseconds 250",
-        "        $spotify_process = Get-Process | Where { $_.name -eq \"Spotify\" }",
+        "        $spotify_process = Get-Process | Where { $_.name -eq 'Spotify' }",
         "    } while($spotify_process -eq $null)",
         "",
         "    $spotify_process | ForEach-Object { Stop-Process -Id $_.Id }",
@@ -37,8 +37,8 @@
     ],
     "uninstaller": {
         "script": [
-            "Get-Process -Name \"*Spotify*\" | ForEach-Object { Stop-Process $_ }",
-            "Start-Process -Wait \"$($dir)\\Spotify.exe\" -ArgumentList \"/Uninstall\", \"/Silent\""
+            "StopProcess -Name Spotify",
+            "Start-Process -Wait \"$($dir)\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'"
         ]
     }
 }
