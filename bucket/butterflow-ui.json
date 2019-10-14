@@ -1,0 +1,20 @@
+{
+    "homepage": "https://github.com/wagesj45/butterflow-ui",
+    "description": "A graphical user interface for butterflow, a command-line tool for performing motion interpolation on videos.",
+    "license": "MIT",
+    "version": "1.1.0",
+    "url": "https://github.com/wagesj45/butterflow-ui/releases/download/1.1.0/butterflow_ui.setup.msi",
+    "hash": "2bfc590281746cac65161b156b93f764f96d261a899e1daa95bc2b04c0a241bf",
+    "extract_dir": "butterflow-ui",
+    "bin": "ThirdPartyCompiled\\butterflow.exe",
+    "shortcuts": [
+        [
+            "butterflow-ui.exe",
+            "butterflow-ui"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/wagesj45/butterflow-ui/releases/download/$version/butterflow_ui.setup.msi"
+    }
+}

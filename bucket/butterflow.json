@@ -1,0 +1,10 @@
+{
+    "homepage": "https://github.com/dthpham/butterflow",
+    "description": "A command-line tool for performing motion interpolation on videos.",
+    "license": "MIT",
+    "version": "0.2.4a4",
+    "url": "https://github.com/dthpham/butterflow/releases/download/0.2.4.alpha2/butterflow-0.2.4a4-win64.zip",
+    "hash": "856ad05bafaeb9d084d6b1cbf0bdec17defeef438e610f6a3a772087acea301b",
+    "extract_dir": "butterflow-0.2.4a4-win64",
+    "bin": "butterflow.exe"
+}
