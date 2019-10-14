@@ -10,18 +10,18 @@
     ],
     "hash": [
         "ef32be8b776b67b7f2bbdaef8419dccd7c94df27afc3b2ee92c79c2fc9d1a320",
-        "b1fa2b5ae6c281260cbfb8a9d2b5e4e559ec39a8e9c77c7b0f08cc91e8685ab0",
+        "f9c6dadd64482f511f37cbad2372d0c0a59f7f15a3201ab7c8ad0190967ff63d",
         "5142d1a911fee70a055af6e410bbcb1504b80cf88897ae5b3cda326229b42134"
     ],
     "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "extract_dir": "MuseScoreNightly",
     "bin": [
         [
-            "nightly.exe",
+            "bin\\nightly.exe",
             "MuseScore"
         ],
         [
-            "nightly.exe",
+            "bin\\nightly.exe",
             "mscore"
         ]
     ],
@@ -31,7 +31,11 @@
             "MuseScore"
         ]
     ],
-    "post_install": "(Get-Content \"$dir\\musescore-install-file-associations.reg\").Replace(\"$musescore\", \"$dir\\bin\\nightly.exe\")) | Set-Content -Path \"$dir\\musescore-install-file-associations.reg\"",
+    "post_install": [
+        "$musescore_path = \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')",
+        "$reg = \"$dir\\musescore-install-file-associations.reg\"",
+        "(Get-Content \"$reg\").Replace('$musescore', $musescore_path) | Set-Content -Path \"$reg\""
+    ],
     "checkver": {
         "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/",
         "regex": ">MuseScoreNightly-(\\d{4}-\\d{2}-\\d{2}-\\d{4}-master-[0-9a-f]{7})-x86_64\\.7z</"
