@@ -1,0 +1,53 @@
+{
+    "homepage": "https://www.disk-partition.com/",
+    "description": "A free and safe disk partition tool.",
+    "license": "Freeware",
+    "version": "8.4",
+    "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe",
+    "hash": "5ec38a1d6567d6fe77574db31c80b20d0da6dcf6c2c4d1e8f15fd0df2bcfb9cb",
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/NORESTART",
+            "/SP-",
+            "/DIR=$dir"
+        ]
+    },
+    "bin": "PartAssist.exe",
+    "shortcuts": [
+        [
+            "PartAssist.exe",
+            "AOMEI Partition Assistant Standard"
+        ]
+    ],
+    "pre_install": [
+        "Start-Job {",
+        "    do {",
+        "        Start-Sleep -Milliseconds 250",
+        "        $partassist_process = Get-Process | Where { $_.name -eq \"PartAssist\" }",
+        "    } while($partassist_process -eq $null)",
+        "",
+        "    $partassist_process | ForEach-Object { Stop-Process -Id $_.Id }",
+        "} | Out-Null"
+    ],
+    "post_install": [
+        "Remove-Item -Recurse -Path \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\AOMEI Partition Assistant Standard Edition *\""
+    ],
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/NORESTART",
+            "/SP-"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.disk-partition.com/download-home.html",
+        "regex": " \\| v(\\d+.\\d+)<"
+    },
+    "autoupdate": {
+        "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe"
+    }
+}
