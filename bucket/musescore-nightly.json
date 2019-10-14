@@ -11,7 +11,7 @@
     "hash": [
         "54e94c55de26e2e1b8aeb5c3b6428a51c2c90e0a6590962e9d089be66711da7f",
         "f9c6dadd64482f511f37cbad2372d0c0a59f7f15a3201ab7c8ad0190967ff63d",
-        "5142d1a911fee70a055af6e410bbcb1504b80cf88897ae5b3cda326229b42134"
+        "8148de55c78222f5c1abc306da54ae9624963db1ae365eaa67ec2a8b50f856f8"
     ],
     "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "extract_dir": "MuseScoreNightly",
