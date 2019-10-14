@@ -28,6 +28,7 @@
         "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify.original\" -Destination \"$Env:APPDATA\\Spotify\" | Out-Null",
         "cmd /c attrib +r \"$Env:LOCALAPPDATA\\Spotify\\Update\""
     ],
+    "bin": "Spotify.exe",
     "shortcuts": [
         [
             "Spotify.exe",

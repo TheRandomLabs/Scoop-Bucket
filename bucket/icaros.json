@@ -5,15 +5,16 @@
     "version": "3.1.1_b2",
     "url": "https://www.videohelp.com/download/Icaros_v3.1.1_b2.zip",
     "hash": "039148150c431e8f4562ff54ce94c742e922a8aae148709a24b087662f9cea31",
-    "post_install": [
-        "Start-Process -Wait -WindowStyle Hidden cmd \"/c cd /D `\"$($dir)`\" && RegSvr32 /s 32-bit\\IcarosThumbnailProvider.dll && RegSvr32 /s 32-bit\\IcarosPropertyHandler.dll && RegSvr32 /s 64-bit\\IcarosThumbnailProvider.dll && RegSvr32 /s 64-bit\\IcarosPropertyHandler.dll && reg add HKLM\\SOFTWARE\\Icaros /f /v `\"Thumbnail Extensions`\" /t REG_SZ /d `\"3g2;3gp;3gp2;3gpp;amv;ape;asf;avi;bik;cb7;cbr;cbz;divx;dpg;dv;dvr-ms;epub;evo;f4v;flac;flv;hdmov;k3g;m1v;m2t;m2ts;m2v;m4b;m4p;m4v;mk3d;mka;mkv;mov;mp2v;mp4;mp4v;mpc;mpe;mpeg;mpg;mpv2;mpv4;mqv;mts;mxf;nsv;ofr;ofs;ogg;ogm;ogv;opus;qt;ram;rm;rmvb;skm;spx;swf;tak;tp;tpr;trp;ts;tta;vob;wav;webm;wm;wmv;wv;xvid`\"\" -Verb RunAs",
-        "Stop-Process -ProcessName explorer"
-    ],
+    "bin": "IcarosConfig.exe",
     "shortcuts": [
         [
             "IcarosConfig.exe",
             "Icaros"
         ]
+    ],
+    "post_install": [
+        "Start-Process -Wait -WindowStyle Hidden cmd \"/c cd /D `\"$($dir)`\" && RegSvr32 /s 32-bit\\IcarosThumbnailProvider.dll && RegSvr32 /s 32-bit\\IcarosPropertyHandler.dll && RegSvr32 /s 64-bit\\IcarosThumbnailProvider.dll && RegSvr32 /s 64-bit\\IcarosPropertyHandler.dll && reg add HKLM\\SOFTWARE\\Icaros /f /v `\"Thumbnail Extensions`\" /t REG_SZ /d `\"3g2;3gp;3gp2;3gpp;amv;ape;asf;avi;bik;cb7;cbr;cbz;divx;dpg;dv;dvr-ms;epub;evo;f4v;flac;flv;hdmov;k3g;m1v;m2t;m2ts;m2v;m4b;m4p;m4v;mk3d;mka;mkv;mov;mp2v;mp4;mp4v;mpc;mpe;mpeg;mpg;mpv2;mpv4;mqv;mts;mxf;nsv;ofr;ofs;ogg;ogm;ogv;opus;qt;ram;rm;rmvb;skm;spx;swf;tak;tp;tpr;trp;ts;tta;vob;wav;webm;wm;wmv;wv;xvid`\"\" -Verb RunAs",
+        "Stop-Process -ProcessName explorer"
     ],
     "uninstaller": {
         "script": [
