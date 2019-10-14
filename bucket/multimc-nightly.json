@@ -1,0 +1,32 @@
+{
+    "homepage": "https://multimc.org/",
+    "description": "A free, open source launcher for Minecraft that allows for multiple, cleanly separated instances of Minecraft.",
+    "license": "Apache-2.0",
+    "version": "nightly",
+    "url": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
+    "extract_dir": "MultiMC",
+    "bin": "MultiMC.exe",
+    "shortcuts": [
+        [
+            "MultiMC.exe",
+            "MultiMC"
+        ]
+    ],
+    "persist": [
+        "accounts",
+        "assets",
+        "instances",
+        "libraries",
+        "meta",
+        "themes",
+        "translations",
+        "accounts.json",
+        "multimc.cfg",
+        "notifications.json"
+    ],
+    "pre_install": [
+        "New-Item -Path \"$dir\\accounts.json\" -ItemType File | Out-Null",
+        "New-Item -Path \"$dir\\multimc.cfg\" -ItemType File -Value UpdateChannel=develop | Out-Null",
+        "New-Item -Path \"$dir\\notifications.json\" -ItemType File | Out-Null"
+    ]
+}
