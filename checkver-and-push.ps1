@@ -1,9 +1,5 @@
 Set-Location -Path $(Split-Path $MyInvocation.MyCommand.Path)
-.\bin\checkver.ps1 * -u
-
-git add .
-git commit -m "Update"
-git push origin
+.\bin\auto-pr.ps1 -p
 
 Set-Location -Path $Env:SCOOP_GLOBAL\buckets\TheRandomLabs
 git fetch --all
