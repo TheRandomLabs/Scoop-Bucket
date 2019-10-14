@@ -3,8 +3,17 @@
     "homepage": "https://musescore.org/",
     "version": "2019-10-14-0925-master-79beac5",
     "license": "GPL-2.0-only",
-    "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-14-0925-master-79beac5-x86_64.7z",
-    "hash": "ef32be8b776b67b7f2bbdaef8419dccd7c94df27afc3b2ee92c79c2fc9d1a320",
+    "url": [
+        "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-14-0925-master-79beac5-x86_64.7z",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-install-file-associations.reg",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-uninstall-file-associations.reg"
+    ],
+    "hash": [
+        "ef32be8b776b67b7f2bbdaef8419dccd7c94df27afc3b2ee92c79c2fc9d1a320",
+        "b1fa2b5ae6c281260cbfb8a9d2b5e4e559ec39a8e9c77c7b0f08cc91e8685ab0",
+        "5142d1a911fee70a055af6e410bbcb1504b80cf88897ae5b3cda326229b42134"
+    ],
+    "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "extract_dir": "MuseScoreNightly",
     "bin": [
         [
@@ -22,6 +31,7 @@
             "MuseScore"
         ]
     ],
+    "post_install": "(Get-Content \"$dir\\musescore-install-file-associations.reg\").Replace(\"$musescore\", \"$dir\\bin\\nightly.exe\")) | Set-Content -Path \"$dir\\musescore-install-file-associations.reg\"",
     "checkver": {
         "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/",
         "regex": ">MuseScoreNightly-(\\d{4}-\\d{2}-\\d{2}-\\d{4}-master-[0-9a-f]{7})-x86_64\\.7z</"
