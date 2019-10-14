@@ -9,7 +9,11 @@
     "bin": [
         [
             "nightly.exe",
-            "musescore"
+            "MuseScore"
+        ],
+        [
+            "nightly.exe",
+            "mscore"
         ]
     ],
     "shortcuts": [
