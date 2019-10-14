@@ -5,22 +5,28 @@
     "version": "1.1.4.197",
     "url": "https://github.com/master131/BlockTheSpot/raw/master/downgrade.bat",
     "hash": "e5ac829a0e6c75478d868d925663b1db9aa7d0e316ac53634766ef33c8f763c2",
+    "notes": "BlockTheSpot should be installed locally to prevent issues.",
     "pre_install": [
         "Get-Process -Name \"*Spotify*\" | ForEach-Object { Stop-Process $_ }",
         "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify\" -Destination \"$Env:APPDATA\\Spotify.original\" | Out-Null",
-        "$kill_spotify_job = Start-Job {",
+        "",
+        "Start-Job {",
         "    do {",
-        "        Start-Sleep -Seconds 1",
+        "        Start-Sleep -Milliseconds 250",
         "        $spotify_process = Get-Process | Where { $_.name -eq \"Spotify\" }",
         "    } while($spotify_process -eq $null)",
         "",
         "    $spotify_process | ForEach-Object { Stop-Process -Id $_.Id }",
-        "}",
+        "} | Out-Null",
+        "",
         "Start-Process -Wait -WindowStyle Hidden cmd \"/c cd /D `\"$($dir)`\" && .\\downgrade.bat\" -Verb RunAs",
+        "",
         "Remove-Item -Path \"$Env:USERPROFILE\\Desktop\\Spotify.lnk\" | Out-Null",
+        "",
         "(Get-ChildItem -Path \"$Env:APPDATA\\Spotify\") | ForEach-Object { Move-Item -Force -LiteralPath \"$($_.FullName)\" -Destination \"$($dir)\\$($_.Name)\" }",
         "Remove-Item -Path \"$Env:APPDATA\\Spotify\"",
-        "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify.original\" -Destination \"$Env:APPDATA\\Spotify\" | Out-Null"
+        "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify.original\" -Destination \"$Env:APPDATA\\Spotify\" | Out-Null",
+        "cmd /c attrib +r \"$Env:LOCALAPPDATA\\Spotify\\Update\""
     ],
     "shortcuts": [
         [
