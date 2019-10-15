@@ -15,7 +15,7 @@
     },
     "installer": {
         "script": [
-            "if($arch -eq '64bit') {",
+            "if ($arch -eq '64bit') {",
             "    $file_name_arch = '64'",
             "} else {",
             "    $file_name_arch = '86'",

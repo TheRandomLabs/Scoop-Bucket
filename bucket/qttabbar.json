@@ -12,13 +12,13 @@
         "7397868c2363ff50c883705e2f67f811c99a9badbaa3a18d19a50e5e834094ff"
     ],
     "installer": {
-        "file": "QTTabBar.exe", 
+        "file": "QTTabBar.exe",
         "args": "/qi",
         "keep": "true"
     },
     "post_install": [
         "Start-Process -Wait \"$($dir)\\UpdateQTTabBar1040.exe\"",
-        "Stop-Process -ProcessName explorer"
+        "Stop-Process -Name explorer"
     ],
     "uninstaller": {
         "file": "QTTabBar.exe",
