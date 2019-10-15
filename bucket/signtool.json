@@ -1,0 +1,21 @@
+{
+    "homepage": "https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk",
+    "description": "A command-line tool that digitally signs files, verifies signatures in files or timestamps files.",
+    "license": "https://github.com/TheRandomLabs/Scoop-Bucket-Binaries/raw/master/signtool/sdk_license.rtf",
+    "version": "10.0.18362.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TheRandomLabs/Scoop-Bucket-Binaries/raw/master/signtool/signtool-10.0.18362.0-x64.zip",
+            "hash": "839d2076d8fb958b0bd703dacc9d9aec83f10182d7d43132b41fe0a2c2cb8dbb"
+        },
+        "32bit": {
+            "url": "https://github.com/TheRandomLabs/Scoop-Bucket-Binaries/raw/master/signtool/signtool-10.0.18362.0-x86.zip",
+            "hash": "e6fadb2d06c9b252f7f37796b0f4809ccbe48cd2bf8eb200404d1bd260788eaa"
+        }
+    },
+    "bin": [
+        "cert2spc.exe",
+        "makecat.exe",
+        "signtool.exe"
+    ]
+}

@@ -25,6 +25,7 @@
         "(Get-ChildItem -Path \"$Env:APPDATA\\Spotify\") | ForEach-Object { Move-Item -Force -LiteralPath \"$($_.FullName)\" -Destination \"$($dir)\\$($_.Name)\" }",
         "Remove-Item -Path \"$Env:APPDATA\\Spotify\"",
         "Move-Item -ErrorAction Ignore -Path \"$Env:APPDATA\\Spotify.original\" -Destination \"$Env:APPDATA\\Spotify\" | Out-Null",
+        "",
         "cmd /c icacls \"$Env:LOCALAPPDATA\\Spotify\\Update\" /reset /T | Out-Null",
         "Remove-Item -ErrorAction Ignore -Recurse -Path \"$Env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null",
         "New-Item -Path \"$Env:LOCALAPPDATA\\Spotify\\Update\" -ItemType Directory | Out-Null",
