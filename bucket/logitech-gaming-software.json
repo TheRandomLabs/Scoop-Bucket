@@ -1,6 +1,6 @@
 {
     "homepage": "https://support.logi.com/hc/en-us/articles/360025298053-Logitech-Gaming-Software",
-    "description": "Lets you customize functions on Logitech gaming mice, keyboards, headsets, speakers and wheels.",
+    "description": "A tool for the customization of functions on Logitech gaming mice, keyboards, headsets, speakers and wheels.",
     "license": "Proprietary",
     "version": "9.02.65",
     "architecture": {
@@ -13,15 +13,17 @@
             "hash": "fd70176ddeeee0a24bbaceef67a67004debf53ed437db7d7c06786f8d4fd8eeb"
         }
     },
-    "post_install": [
-        "if($arch -eq '64bit') {",
-        "    $file_name_arch = '64'",
-        "} else {",
-        "    $file_name_arch = '86'",
-        "}",
-        "",
-        "Start-Process -Wait \"$($dir)\\LGS_$($version)_x$($file_name_arch)_Logitech.exe\" /S -Verb RunAs"
-    ],
+    "installer": {
+        "script": [
+            "if($arch -eq '64bit') {",
+            "    $file_name_arch = '64'",
+            "} else {",
+            "    $file_name_arch = '86'",
+            "}",
+            "",
+            "Start-Process -Wait \"$($dir)\\LGS_$($version)_x$($file_name_arch)_Logitech.exe\" /S -Verb RunAs"
+        ]
+    },
     "uninstaller": {
         "script": [
             "$uninstall_string = $(Get-ItemProperty -Path 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Logitech Gaming Software' -Name UninstallString).UninstallString",

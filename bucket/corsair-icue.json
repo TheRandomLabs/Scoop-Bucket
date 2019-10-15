@@ -1,0 +1,33 @@
+{
+    "homepage": "https://www.corsair.com/us/en/icue",
+    "description": "A tool for the customization of functions on Corsair peripherals and components.",
+    "license": "Proprietary",
+    "version": "3.20.80",
+    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.20.80_release.msi#/setup.msix",
+    "hash": "73a0c1876ca7d34692b7e2afeebe61c151046f6c540745085990270f26369eef",
+    "installer": {
+        "script": [
+            "Start-Process -Wait msiexec \"/i `\"$($dir)\\setup.msix`\" /qn INSTALLFOLDER=`\"$($dir)`\"\" -Verb RunAs",
+            "Remove-Item -Path \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Corsair\\iCUE.lnk\"",
+            "# If the Corsair directory is empty, delete it",
+            "Remove-Item -ErrorAction Ignore -Path \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Corsair\""
+        ]
+    },
+    "uninstaller": {
+        "script": "Start-Process -Wait msiexec \"/x `\"$($dir)\\setup.msix`\" /qn\" -Verb RunAs"
+    },
+    "bin": "iCUE.exe",
+    "shortcuts": [
+        [
+            "iCUE.exe",
+            "iCUE"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.corsair.com/us/en/downloads",
+        "regex": "=\"CORSAIR iCUE (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_$version_release.msi#/setup.msix"
+    }
+}
