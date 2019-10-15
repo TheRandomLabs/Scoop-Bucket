@@ -5,6 +5,7 @@
     "version": "3.20.80",
     "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.20.80_release.msi#/setup.msix",
     "hash": "73a0c1876ca7d34692b7e2afeebe61c151046f6c540745085990270f26369eef",
+    "notes": "Run the following PowerShell command as administrator to disable the Corsair Service starting automatically: Set-Service -name CorsairService -StartupType Manual",
     "installer": {
         "script": [
             "Start-Process -Wait msiexec \"/i `\"$($dir)\\setup.msix`\" /qn INSTALLFOLDER=`\"$($dir)`\"\" -Verb RunAs",
