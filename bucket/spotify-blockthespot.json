@@ -43,7 +43,7 @@
             "Stop-Process -ErrorAction Ignore -Name Spotify | Out-Null",
             "Start-Process -Wait \"$($dir)\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
             "cmd /c icacls \"$Env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null",
-            "Remove-Item -ErrorAction Ignore -Recurse -Path \"$Env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null"
+            "Remove-Item -ErrorAction Ignore -Recurse -Path \"$Env:LOCALAPPDATA\\Spotify\" | Out-Null"
         ]
     }
 }
