@@ -15,6 +15,10 @@
     ],
     "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "extract_dir": "MuseScoreNightly",
+    "post_install": [
+        "$reg = \"$dir\\musescore-install-file-associations.reg\"",
+        "(Get-Content \"$reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content -Path \"$reg\""
+    ],
     "bin": [
         [
             "bin\\nightly.exe",
@@ -30,11 +34,6 @@
             "bin\\nightly.exe",
             "MuseScore"
         ]
-    ],
-    "post_install": [
-        "$musescore_path = \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')",
-        "$reg = \"$dir\\musescore-install-file-associations.reg\"",
-        "(Get-Content \"$reg\").Replace('$musescore', $musescore_path) | Set-Content -Path \"$reg\""
     ],
     "checkver": {
         "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/",

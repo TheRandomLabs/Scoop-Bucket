@@ -15,21 +15,25 @@
     },
     "installer": {
         "script": [
-            "if ($arch -eq '64bit') {",
-            "    $file_name_arch = '64'",
-            "} else {",
-            "    $file_name_arch = '86'",
+            "if (!(is_admin)) {",
+            "    error \"Administrator rights are required to install $app.\"",
+            "    exit 1",
             "}",
             "",
-            "Start-Process -Wait \"$($dir)\\LGS_$($version)_x$($file_name_arch)_Logitech.exe\" /S -Verb RunAs"
+            "Start-Process -Wait \"$dir\\LGS_$(version)_x$(if ($arch -eq '64bit') { '64' } else { '86' })_Logitech.exe\" /S"
         ]
     },
     "uninstaller": {
         "script": [
+            "if (!(is_admin)) {",
+            "    error \"Administrator rights are required to uninstall $app.\"",
+            "    exit 1",
+            "}",
+            "",
             "$uninstall_string = $(Get-ItemProperty -Path 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Logitech Gaming Software' -Name UninstallString).UninstallString",
             "$uninstall_string = $uninstall_string.replace('/silentmode=off', '/silentmode=on')",
             "$arguments_index = $uninstall_string.IndexOf(\".exe\") + 5",
-            "Start-Process -Wait \"$($uninstall_string.Substring(0, $arguments_index))\" \"$($uninstall_string.Substring($arguments_index))\" -Verb RunAs"
+            "Start-Process -Wait \"$($uninstall_string.Substring(0, $arguments_index))\" \"$($uninstall_string.Substring($arguments_index))\""
         ]
     }
 }

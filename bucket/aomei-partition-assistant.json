@@ -5,23 +5,12 @@
     "version": "8.4",
     "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe",
     "hash": "5ec38a1d6567d6fe77574db31c80b20d0da6dcf6c2c4d1e8f15fd0df2bcfb9cb",
-    "installer": {
-        "args": [
-            "/VERYSILENT",
-            "/SUPPRESSMSGBOXES",
-            "/NORESTART",
-            "/SP-",
-            "/DIR=$dir"
-        ]
-    },
-    "bin": "PartAssist.exe",
-    "shortcuts": [
-        [
-            "PartAssist.exe",
-            "AOMEI Partition Assistant Standard"
-        ]
-    ],
     "pre_install": [
+        "if (!(is_admin)) {",
+        "    error \"Administrator rights are required to install $app.\"",
+        "    exit 1",
+        "}",
+        "",
         "Start-Job {",
         "    do {",
         "        Start-Sleep -Milliseconds 250",
@@ -31,6 +20,15 @@
         "    $partassist_process | ForEach-Object { Stop-Process -Id $_.Id }",
         "} | Out-Null"
     ],
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/NORESTART",
+            "/SP-",
+            "/DIR=$dir"
+        ]
+    },
     "post_install": [
         "Remove-Item -Recurse -Path \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\AOMEI Partition Assistant Standard Edition *\""
     ],
@@ -43,6 +41,13 @@
             "/SP-"
         ]
     },
+    "bin": "PartAssist.exe",
+    "shortcuts": [
+        [
+            "PartAssist.exe",
+            "AOMEI Partition Assistant Standard"
+        ]
+    ],
     "checkver": {
         "url": "https://www.disk-partition.com/download-home.html",
         "regex": " \\| v(\\d+.\\d+)<"

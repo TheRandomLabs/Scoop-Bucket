@@ -5,6 +5,11 @@
     "version": "nightly",
     "url": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
     "extract_dir": "MultiMC",
+    "pre_install": [
+        "New-Item -Path \"$dir\\accounts.json\" -ItemType File | Out-Null",
+        "New-Item -Path \"$dir\\multimc.cfg\" -ItemType File -Value \"IconTheme=pe_colored`r`nLaunchMaximized=true`r`nUpdateChannel=develop\" | Out-Null",
+        "New-Item -Path \"$dir\\notifications.json\" -ItemType File | Out-Null"
+    ],
     "bin": "MultiMC.exe",
     "shortcuts": [
         [
@@ -23,10 +28,5 @@
         "accounts.json",
         "multimc.cfg",
         "notifications.json"
-    ],
-    "pre_install": [
-        "New-Item -Path \"$dir\\accounts.json\" -ItemType File | Out-Null",
-        "New-Item -Path \"$dir\\multimc.cfg\" -ItemType File -Value \"IconTheme=pe_colored`r`nLaunchMaximized=true`r`nUpdateChannel=develop\" | Out-Null",
-        "New-Item -Path \"$dir\\notifications.json\" -ItemType File | Out-Null"
     ]
 }
