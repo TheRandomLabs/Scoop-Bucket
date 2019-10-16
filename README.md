@@ -6,11 +6,34 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 ## Notes
 
-* The installer for AOMEI Partition Assistant opens a webpage upon installation and uninstallation.
-* While the installer for Corsair iCUE must be run as administrator, `scoop uninstall corsair-icue`
-should not be run as administrator until
+### AOMEI Partition Assistant
+
+* The installer and uninstaller open a webpage upon completion.
+
+### Corsair iCUE
+
+* `scoop install corsair-icue` must be run as administrator,
+which can be done most easily using `sudo`.
+* However, `scoop uninstall corsair-icue` should not be run as administrator until
 [this](https://github.com/lukesampson/scoop/issues/2952#issuecomment-542531849) is resolved.
-* Spotify should be installed locally so that Scoop can prevent it from attempting to update, which
-causes Spotify to fail to start.
-* The installer for QTTabBar shows a dialog that requires user interaction.
-* The installer for QTTabBar may show an error related to start menu items. This can be ignored.
+
+### Icaros
+
+* Both `scoop install icaros` and `scoop uninstall icaros` must be run as administrator,
+which can be done most easily using `sudo`.
+
+### Logitech Gaming Software
+
+* Both `scoop install logitech-gaming-software` and `scoop uninstall logitech-gaming-software`
+must be run as administrator, which can be done most easily using `sudo`.
+
+### Spotify with BlockTheSpot
+
+* `scoop install spotify-blockthespot` must be run as administrator,
+which can be done most easily using `sudo`.
+* However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
+
+### QTTabBar
+
+* The installer shows a dialog that requires user interaction.
+* The installer may show an error related to start menu items. This can be safely ignored.
