@@ -20,7 +20,7 @@
             "    exit 1",
             "}",
             "",
-            "Start-Process -Wait \"$dir\\LGS_$(version)_x$(if ($arch -eq '64bit') { '64' } else { '86' })_Logitech.exe\" /S"
+            "Start-Process -Wait \"$dir\\LGS_$(version)_x$(if ($architecture -eq '64bit') { '64' } else { '86' })_Logitech.exe\" /S"
         ]
     },
     "uninstaller": {
