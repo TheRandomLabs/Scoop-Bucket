@@ -1,0 +1,25 @@
+{
+    "homepage": "https://www.ffmpeg.org/",
+    "description": "Installs the FFmpeg library in Audacity, which allows Audacity to import a much larger range of audio formats and also to import audio from most video files.",
+    "license": {
+        "identifier": "LGPL-2.1-only",
+        "url": "https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md"
+    },
+    "version": "2.2.11",
+    "url": "http://web.archive.org/web/20150922095013if_/http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-2.2.11-win32-shared.7z",
+    "hash": "a60a9f9466b967d5bef8f9b242b928f98516f756c7c5ea06660b37c6cdbc6bfc",
+    "depends": "audacity",
+    "extract_dir": "ffmpeg-2.2.11-win32-shared\\bin",
+    "post_install": [
+        "Copy-Item -Path \"$dir\\*.dll\" -Destination \"$(appdir audacity $global)\\current\"",
+        "Copy-Item -Path \"$dir\\ffmpeg.exe\" -Destination \"$(appdir audacity $global)\\current\""
+    ],
+    "uninstaller": {
+        "script": [
+            "Remove-Item -Path \"$(appdir audacity $global)\\current\\av*.dll\"",
+            "Remove-Item -Path \"$(appdir audacity $global)\\current\\postproc*.dll\"",
+            "Remove-Item -Path \"$(appdir audacity $global)\\current\\sw*.dll\"",
+            "Remove-Item -Path \"$(appdir audacity $global)\\current\\ffmpeg.exe\""
+        ]
+    }
+}
