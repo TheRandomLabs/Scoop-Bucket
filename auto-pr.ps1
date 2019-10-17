@@ -1,3 +1,5 @@
+# TODO move to Docker container
+
 Set-Location -Path $(Split-Path $MyInvocation.MyCommand.Path)
 .\bin\auto-pr.ps1 -p
 

@@ -1,4 +1,7 @@
-if(!$env:SCOOP_HOME) { $env:SCOOP_HOME = resolve-path (split-path (split-path (scoop which scoop))) }
-$checkver = "$env:SCOOP_HOME/bin/checkver.ps1"
-$dir = "$psscriptroot/../bucket" # checks the parent dir
-Invoke-Expression -command "& '$checkver' -dir '$dir' $($args | ForEach-Object { "$_ " })"
+if (!$Env:SCOOP_HOME) {
+    $Env:SCOOP_HOME = Resolve-Path(Split-Path(Split-Path(scoop which scoop))) 
+}
+
+$checkver = "$Env:SCOOP_HOME\bin\checkver.ps1"
+$dir = "$psscriptroot\..\bucket"
+Invoke-Expression -Command "& '$checkver' -dir '$dir' $($args | ForEach-Object { "$_ " })"
