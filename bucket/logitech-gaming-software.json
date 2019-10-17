@@ -1,7 +1,10 @@
 {
     "homepage": "https://support.logi.com/hc/en-us/articles/360025298053-Logitech-Gaming-Software",
     "description": "A tool for the customization of functions on Logitech gaming mice, keyboards, headsets, speakers and wheels.",
-    "license": "Proprietary",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.logitech.com/assets/51813/3/lgs-guide.pdf#page=29"
+    },
     "version": "9.02.65",
     "architecture": {
         "64bit": {

@@ -2,7 +2,10 @@
     "description": "A music notation editor with an easy-to-use WYSIWYG interface.",
     "homepage": "https://musescore.org/",
     "version": "2019-10-15-1355-master-417f33b",
-    "license": "GPL-2.0-only",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/musescore/MuseScore/blob/master/LICENSE.GPL"
+    },
     "url": [
         "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-15-1355-master-417f33b-x86_64.7z",
         "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-install-file-associations.reg",
