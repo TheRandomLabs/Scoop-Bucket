@@ -2,7 +2,7 @@
     "homepage": "https://minecraft.net/",
     "description": "The official launcher for Minecraft, the popular sandbox voxel game.",
     "license": {
-        "identifier": "Freeware",
+        "identifier": "Proprietary",
         "url": "https://account.mojang.com/terms"
     },
     "version": "nightly",

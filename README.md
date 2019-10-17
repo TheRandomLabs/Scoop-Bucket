@@ -27,10 +27,10 @@ which can be done most easily using `sudo`.
 * Both `scoop install logitech-gaming-software` and `scoop uninstall logitech-gaming-software`
 must be run as administrator, which can be done most easily using `sudo`.
 
-### Minecraft
+### Minecraft Launcher
 
-* Minecraft's version is defined as `nightly`. This means that
-`scoop update minecraft --force --no-cache` or `scoop update minecraft -kf`
+* The Minecraft launcher's version is defined as `nightly`. This means that
+`scoop update minecraft-launcher --force --no-cache` or `scoop update minecraft-launcher -kf`
 should be used to update it.
 
 ### MultiMC Development Version
