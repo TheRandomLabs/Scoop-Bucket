@@ -27,6 +27,18 @@ which can be done most easily using `sudo`.
 * Both `scoop install logitech-gaming-software` and `scoop uninstall logitech-gaming-software`
 must be run as administrator, which can be done most easily using `sudo`.
 
+### Minecraft
+
+* Minecraft's version is defined as `nightly`. This means that
+`scoop update minecraft --force --no-cache` or `scoop update minecraft -kf`
+should be used to update it.
+
+### MultiMC Development Version
+
+* MultiMC's version is defined as `nightly`. This means that
+`scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
+should be used to update it.
+
 ### Spotify with BlockTheSpot
 
 * `scoop install spotify-blockthespot` must be run as administrator,
