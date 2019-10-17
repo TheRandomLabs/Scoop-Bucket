@@ -17,6 +17,13 @@ which can be done most easily using `sudo`.
 * However, `scoop uninstall corsair-icue` should not be run as administrator until
 [this](https://github.com/lukesampson/scoop/issues/2952#issuecomment-542531849) is resolved.
 
+### FFmpeg for Audacity
+
+* This version (2.2.11) is more up-to-date than the one found in
+[rasa's bucket](https://github.com/rasa/scoops) (2.2.2).
+* It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
+to be installed separately.
+
 ### Icaros
 
 * Both `scoop install icaros` and `scoop uninstall icaros` must be run as administrator,
