@@ -6,5 +6,13 @@
     "url": "https://github.com/dthpham/butterflow/releases/download/0.2.4.alpha2/butterflow-0.2.4a4-win64.zip",
     "hash": "856ad05bafaeb9d084d6b1cbf0bdec17defeef438e610f6a3a772087acea301b",
     "extract_dir": "butterflow-0.2.4a4-win64",
-    "bin": "butterflow.exe"
+    "bin": "butterflow.exe",
+    "checkver": {
+        "url": "https://github.com/dthpham/butterflow/releases/latest",
+        "regex": "<a href=\"/dthpham/butterflow/releases/download/(?<long>\\d+\\.\\d+\\.\\d+(?<longTail>\\.[a-z1-9]+)?)/butterflow-(?<version>\\d+\\.\\d+\\.\\d+[a-z1-9]*)-win64.zip",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://github.com/dthpham/butterflow/releases/download/$matchLong/butterflow-$version-win64.zip"
+    }
 }
