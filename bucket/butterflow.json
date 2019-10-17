@@ -12,7 +12,7 @@
     "bin": "butterflow.exe",
     "checkver": {
         "url": "https://github.com/dthpham/butterflow/releases/latest",
-        "regex": "<a href=\"/dthpham/butterflow/releases/download/(?<long>\\d+\\.\\d+\\.\\d+(?<longTail>\\.[a-z1-9]+)?)/butterflow-(?<version>\\d+\\.\\d+\\.\\d+[a-z1-9]*)-win64.zip",
+        "regex": "<a href=\"/dthpham/butterflow/releases/download/(?<long>[\\d.]+(?<longTail>\\.[a-z1-9]+)?)/butterflow-(?<version>[\\d.]+(?<shortTail>[a-z1-9]*)?)-win64.zip",
         "reverse": true
     },
     "autoupdate": {

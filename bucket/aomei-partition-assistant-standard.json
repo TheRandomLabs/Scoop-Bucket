@@ -53,7 +53,7 @@
     ],
     "checkver": {
         "url": "https://www.disk-partition.com/download-home.html",
-        "regex": " \\| v(\\d+.\\d+)<"
+        "regex": " \\| v([\\d+.]+)<"
     },
     "autoupdate": {
         "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe"

@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://github.com/MattMcManis/Axiom/releases",
-        "regex": "\"/MattMcManis/Axiom/tree/v(\\d+\\.\\d+\\.\\d+\\.\\d+-[a-z]+)"
+        "regex": "\"/MattMcManis/Axiom/tree/v([\\d+.]+(-[a-z]+)?)"
     },
     "autoupdate": {
         "url": "https://github.com/MattMcManis/Axiom/releases/download/v$version/Axiom.zip"

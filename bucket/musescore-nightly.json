@@ -40,7 +40,7 @@
     ],
     "checkver": {
         "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/",
-        "regex": ">MuseScoreNightly-(\\d{4}-\\d{2}-\\d{2}-\\d{4}-master-[0-9a-f]{7})-x86_64\\.7z</"
+        "regex": ">MuseScoreNightly-([\\d-]+master-[0-9a-f]+)-x86_64\\.7z</"
     },
     "autoupdate": {
         "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-$version-x86_64.7z"
