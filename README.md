@@ -1,3 +1,7 @@
+<!-- markdownlint-disable MD010 -->
+<!-- markdownlint-disable MD014 -->
+<!-- markdownlint-disable MD037 -->
+
 # Scoop Bucket
 
 My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
