@@ -1,6 +1,6 @@
 {
     "homepage": "https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk",
-    "description": "A command-line tool for digitally signing files, verifying file signatures and timestamping files.",
+    "description": "A set of command-line tools for digitally signing files, verifying file signatures and timestamping files.",
     "license": {
         "identifier": "Proprietary",
         "url": "https://github.com/TheRandomLabs/Scoop-Bucket-Binaries/raw/master/windows-sdk-signing-tools/sdk_license.rtf"
