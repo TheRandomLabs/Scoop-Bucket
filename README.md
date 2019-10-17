@@ -6,7 +6,7 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 ## Notes
 
-### AOMEI Partition Assistant
+### AOMEI Partition Assistant Standard
 
 * The installer and uninstaller open a webpage upon completion.
 

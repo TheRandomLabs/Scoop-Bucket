@@ -1,7 +1,10 @@
 {
     "homepage": "https://www.disk-partition.com/",
     "description": "A free and safe disk partition tool.",
-    "license": "Freeware",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.disk-partition.com/eula/pa-standard.pdf"
+    },
     "version": "8.4",
     "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe",
     "hash": "5ec38a1d6567d6fe77574db31c80b20d0da6dcf6c2c4d1e8f15fd0df2bcfb9cb",
