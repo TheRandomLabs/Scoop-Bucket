@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.ffmpeg.org/",
-    "description": "Installs the FFmpeg library in Audacity, which allows Audacity to import a much larger range of audio formats and also to import audio from most video files.",
+    "description": "Installs the FFmpeg library in Audacity, which allows Audacity to import a much larger range of audio formats and to import audio from most video files.",
     "license": {
         "identifier": "LGPL-2.1-only",
         "url": "https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md"
