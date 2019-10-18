@@ -15,6 +15,11 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 * The installer and uninstaller open a webpage upon completion.
 
+
+### butterflow-ui
+
+* butterflow is packaged with butterflow-ui and does not need to be installed separately.
+
 ### Corsair iCUE
 
 * `scoop uninstall corsair-icue` should not be run as administrator until
