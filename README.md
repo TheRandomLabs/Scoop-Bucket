@@ -1,6 +1,7 @@
 <!-- markdownlint-disable MD010 -->
 <!-- markdownlint-disable MD014 -->
 <!-- markdownlint-disable MD037 -->
+<!-- markdownlint-disable MD046 -->
 
 # Scoop Bucket
 
@@ -16,10 +17,17 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 ### Corsair iCUE
 
-* `scoop install corsair-icue` must be run as administrator,
-which can be done most easily using `sudo`.
-* However, `scoop uninstall corsair-icue` should not be run as administrator until
+* `scoop uninstall corsair-icue` should not be run as administrator until
 [this](https://github.com/lukesampson/scoop/issues/2952#issuecomment-542531849) is resolved.
+* This means that `scoop update corsair-icue` also cannot be run as administrator and will show
+two UAC dialogs.
+* Alternatively, the following commands can be run prior to running
+`sudo scoop uninstall corsair-icue` or `sudo scoop update corsair-icue`:
+
+```powershell
+$icue_path = "$(Split-Path(scoop prefix corsair-icue))\*"
+Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
+```
 
 ### FFmpeg for Audacity
 
