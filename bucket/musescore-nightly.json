@@ -1,17 +1,17 @@
 {
-    "version": "2019-10-15-1355-master-417f33b",
+    "version": "2019-10-18-2213-master-5ea06dc",
     "description": "Music notation editor with an easy-to-use WYSIWYG interface.",
     "homepage": "https://musescore.org/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
             "url": [
-                "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-15-1355-master-417f33b-x86_64.7z",
+                "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-18-2213-master-5ea06dc-x86_64.7z",
                 "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-install-file-associations.reg",
                 "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-uninstall-file-associations.reg"
             ],
             "hash": [
-                "3c194173c007e9e99ce270ed9c6144846f02336fc3987355615c7a142ac57829",
+                "7c96deebf0b4f1ff3dc4ffd269c1a99fd3082b4d2c917656bb281ab4aceb8c0c",
                 "f9c6dadd64482f511f37cbad2372d0c0a59f7f15a3201ab7c8ad0190967ff63d",
                 "8148de55c78222f5c1abc306da54ae9624963db1ae365eaa67ec2a8b50f856f8"
             ],
