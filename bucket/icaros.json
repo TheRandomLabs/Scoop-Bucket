@@ -42,7 +42,7 @@
     ],
     "checkver": {
         "url": "https://www.videohelp.com/software/Icaros",
-        "regex": "href=\"https://www.videohelp.com/download/Icaros_v([\\d.]+(_[a-z0-9]+)?).zip",
+        "regex": "/download/Icaros_v([\\w.]+)\\.zip",
         "reverse": true
     },
     "autoupdate": {
