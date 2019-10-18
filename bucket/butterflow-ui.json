@@ -6,8 +6,12 @@
         "url": "https://github.com/wagesj45/butterflow-ui/blob/master/LICENSE"
     },
     "version": "1.1.0",
-    "url": "https://github.com/wagesj45/butterflow-ui/releases/download/1.1.0/butterflow_ui.setup.msi",
-    "hash": "2bfc590281746cac65161b156b93f764f96d261a899e1daa95bc2b04c0a241bf",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wagesj45/butterflow-ui/releases/download/1.1.0/butterflow_ui.setup.msi",
+            "hash": "2bfc590281746cac65161b156b93f764f96d261a899e1daa95bc2b04c0a241bf"
+        }
+    },
     "extract_dir": "butterflow-ui",
     "bin": [
         "butterflow-ui.exe",
