@@ -68,3 +68,10 @@ which can be done most easily using `sudo`.
 
 * The installer shows a dialog that requires user interaction.
 * The installer may show an error related to start menu items. This can be safely ignored.
+
+### youtube-dl with FFmpeg Nightly
+
+* This is the same as `youtube-dl` from the main bucket, but instead of `ffmpeg`, it depends on
+`ffmpeg-nightly`.
+* Nightly builds work well virtually all of the time and are constantly improved upon, so it can
+make sense to prefer `ffmpeg-nightly`.
