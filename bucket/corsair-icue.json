@@ -1,8 +1,8 @@
 {
-    "homepage": "https://www.corsair.com/us/en/icue",
-    "description": "A tool for the customization of functions on Corsair peripherals and components.",
-    "license": "Freeware",
     "version": "3.21.88",
+    "description": "Tool for the customization of functions on Corsair peripherals and components.",
+    "homepage": "https://www.corsair.com/us/en/icue",
+    "license": "Freeware",
     "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.21.88_release.msi#/setup.msix",
     "hash": "41dadc906739120857868eaf1933b6286ba31a9ff5276607f0ba7adcf3a14755",
     "notes": [

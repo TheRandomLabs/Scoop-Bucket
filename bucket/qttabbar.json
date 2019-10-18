@@ -1,8 +1,8 @@
 {
-    "homepage": "http://qttabbar.wikidot.com/",
-    "description": "A shell extension for the File Explorer that transforms it into a tabbed browser with many other customizable functions and features.",
-    "license": "Freeware",
     "version": "1040",
+    "description": "Shell extension for the File Explorer that transforms it into a tabbed browser.",
+    "homepage": "http://qttabbar.wikidot.com/",
+    "license": "Freeware",
     "url": [
         "http://qttabbar.wdfiles.com/local--files/qttabbar/UpdateQTTabBar1040.zip",
         "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip"

@@ -1,8 +1,8 @@
 {
-    "homepage": "https://www.majorgeeks.com/files/details/icaros.html",
-    "description": "A collection of lightweight, high quality Windows shell extensions capable of providing File Explorer thumbnails for essentially any video format.",
-    "license": "Freeware",
     "version": "3.1.1_b2",
+    "description": "A collection of lightweight, high quality Windows shell extensions capable of providing File Explorer thumbnails for essentially any video format.",
+    "homepage": "https://www.majorgeeks.com/files/details/icaros.html",
+    "license": "Freeware",
     "url": "https://www.videohelp.com/download/Icaros_v3.1.1_b2.zip",
     "hash": "039148150c431e8f4562ff54ce94c742e922a8aae148709a24b087662f9cea31",
     "pre_install": [

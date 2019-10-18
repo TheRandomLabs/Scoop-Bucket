@@ -1,11 +1,11 @@
 {
+    "version": "1.1.4.197",
+    "description": "Ad-free version of Spotify, a digital music service.",
     "homepage": "https://github.com/master131/BlockTheSpot",
-    "description": "An ad-free version of Spotify, the popular digital music service.",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
-    "version": "1.1.4.197",
     "url": "https://github.com/master131/BlockTheSpot/raw/master/downgrade.bat",
     "hash": "e5ac829a0e6c75478d868d925663b1db9aa7d0e316ac53634766ef33c8f763c2",
     "installer": {

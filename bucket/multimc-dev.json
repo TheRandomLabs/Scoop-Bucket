@@ -1,11 +1,8 @@
 {
-    "homepage": "https://multimc.org/",
-    "description": "A free, open source launcher for Minecraft that allows for multiple, cleanly separated instances of Minecraft.",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/MultiMC/MultiMC5/blob/develop/COPYING.md"
-    },
     "version": "nightly",
+    "description": "Free, open source launcher for Minecraft that allows for multiple, cleanly separated instances of Minecraft.",
+    "homepage": "https://multimc.org/",
+    "license": "Apache-2.0",
     "url": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
     "extract_dir": "MultiMC",
     "pre_install": [

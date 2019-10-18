@@ -1,11 +1,8 @@
 {
-    "homepage": "https://axiomui.github.io/",
-    "description": "An FFmpeg GUI for Windows.",
-    "license": {
-        "identifier": "GPL-3.0-only",
-        "url": "https://github.com/MattMcManis/Axiom/blob/master/LICENSE"
-    },
     "version": "1.7.6.0-alpha",
+    "description": "GUI for FFmpeg.",
+    "homepage": "https://axiomui.github.io/",
+    "license": "GPL-3.0-only",
     "url": "https://github.com/MattMcManis/Axiom/releases/download/v1.7.6.0-alpha/Axiom.zip",
     "hash": "2ac7ba868cd13468f1728692dbfb6e0b1b6f8d2df5a7f043f4829fe788c5cb3b",
     "bin": "Axiom.exe",

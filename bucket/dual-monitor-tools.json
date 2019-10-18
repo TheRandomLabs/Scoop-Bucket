@@ -1,8 +1,8 @@
 {
-    "homepage": "http://dualmonitortool.sourceforge.net/",
-    "description": "A utility for Windows users with dual or multiple monitor setups.",
-    "license": "GPL-3.0-only",
     "version": "2.7",
+    "description": "Utility for multiple monitor setups.",
+    "homepage": "http://dualmonitortool.sourceforge.net/",
+    "license": "GPL-3.0-only",
     "url": "https://sourceforge.net/projects/dualmonitortool/files/dualmonitortool/2.7/DualMonitorTools-2.7.zip",
     "hash": "sha1:3f36099857c08349944dfa3016a65385d8844fc6",
     "pre_install": [
