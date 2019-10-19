@@ -1,0 +1,5 @@
+<Configuration>
+    <Display Level="None" AcceptEULA="TRUE" />
+    <Logging Path="%temp%" />
+    <Remove All="TRUE" />
+</Configuration>
