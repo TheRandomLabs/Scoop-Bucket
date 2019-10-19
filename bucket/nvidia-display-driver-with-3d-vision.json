@@ -32,7 +32,7 @@
             "Move-Item \"$dir\\extract\\GFExperience\\EULA.html\" -Destination \"$dir\\setup\\GFExperience\"",
             "Move-Item \"$dir\\extract\\GFExperience\\FunctionalConsent*\" -Destination \"$dir\\setup\\GFExperience\"",
             "",
-            "Start-Process -Wait -WindowStyle Hidden cmd \"/c call `\"$dir\\setup\\setup.exe`\" -s -noreboot && sc config `\"NVDisplay.ContainerLocalSystem`\" start= disabled && sc stop `\"NVDisplay.ContainerLocalSystem`\"\" -Verb RunAs",
+            "& \"$dir\\setup\\setup.exe`\" -s -noreboot",
             "Remove-Item -Recurse \"$dir\\extract\"",
             "Remove-Item -Recurse \"$dir\\setup\""
         ]
