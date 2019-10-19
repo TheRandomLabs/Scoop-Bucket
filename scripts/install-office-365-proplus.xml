@@ -6,5 +6,5 @@
     </Add>
     <Updates Enabled="TRUE" />
     <Display Level="None" AcceptEULA="TRUE" />
-    <Logging Path="%temp%" />
+    <Logging Path="%TEMP%" />
 </Configuration>

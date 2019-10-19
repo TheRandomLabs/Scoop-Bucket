@@ -7,11 +7,12 @@
             <ExcludeApp ID="Groove" />
             <ExcludeApp ID="OneNote" />
             <ExcludeApp ID="OneDrive" />
+            <ExcludeApp ID="Outlook" />
             <ExcludeApp ID="Publisher" />
             <ExcludeApp ID="Teams" />
         </Product>
     </Add>
     <Updates Enabled="TRUE" />
     <Display Level="None" AcceptEULA="TRUE" />
-    <Logging Path="%temp%" />
+    <Logging Path="%TEMP%" />
 </Configuration>
