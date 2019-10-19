@@ -1,0 +1,40 @@
+{
+    "version": "office",
+    "description": "Family of client software, server software and services developed by Microsoft.",
+    "homepage": "https://www.office.com/",
+    "license": "Proprietary",
+    "url": [
+        "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11901-20022.exe#/dl.7z",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/install-office-365-proplus-minimal.xml",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/uninstall-office-365-proplus.xml"
+    ],
+    "hash": [
+        "a04a7c7defad116e4cab15c682781229c660ff9cb91eebbf16d1be7b0e4e5531",
+        "0490695d13ce6b92d87fd23f461c9b5857a4352664105c45674f33ef62c154ad",
+        "8c20cfcbfc474d5159dc59f71fb35abeb2135879f767336631a47b0b0c0982e1"
+    ],
+    "pre_install": [
+        "if ($architecture -eq '32bit') {",
+        "    $install_config = \"$dir\\install-office-365-proplus-minimal.xml\"",
+        "    (Get-Content \"$install_config\").Replace('64', '32') | Set-Content -Path \"$install_config\"",
+        "}"
+    ],
+    "installer": {
+        "file": "setup.exe",
+        "args": [
+            "/configure",
+            "$dir\\install-office-365-proplus-minimal.xml"
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "script": "& \"$dir\\setup.exe\" /configure \"$dir\\uninstall-office-365-proplus.xml\""
+    },
+    "checkver": {
+        "url": "https://www.microsoft.com/en-au/download/confirmation.aspx?id=49117",
+        "regex": "https://download\\.microsoft\\.com/download/(?<path>[\\w-/]+)/(?<version>office)deploymenttool_(?<build>[\\d-]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.microsoft.com/download/$matchPath/officedeploymenttool_$matchBuild.exe#/dl.7z"
+    }
+}
