@@ -61,6 +61,14 @@ should be used to update it.
 `scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
 should be used to update it.
 
+### NVIDIA Display Driver
+
+* This only installs the NVIDIA display driver.
+* Running `scoop uninstall nvidia-display-driver` or
+`scoop uninstall nvidia-display-driver-with-3d-vision` will only remove the local manifest.
+* Setup files are not kept after installation, so there is no point in running `scoop uninstall`
+after installation is complete, as that would prevent Scoop from checking for updates.
+
 ### Spotify with BlockTheSpot
 
 * `scoop install spotify-blockthespot` must be run as administrator,
