@@ -86,9 +86,9 @@ which can be done most easily using `sudo`.
 [nonportable](https://github.com/oltolm/scoop-nonportable) bucket once
 [lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
 
-### youtube-dl with FFmpeg Nightly
+### youtube-dl No Depends
 
-* This is the same as `youtube-dl` from the main bucket, but instead of `ffmpeg`, it depends on
-`ffmpeg-nightly`.
+* This is the same as `youtube-dl` from the main bucket, but instead of depending on `ffmpeg`, it
+suggests either `ffmpeg` or `ffmpeg-nightly`.
 * Nightly builds work well virtually all of the time and are constantly improved upon, so it can
 make sense to prefer `ffmpeg-nightly`.
