@@ -3,7 +3,7 @@
     "description": "Ad-free version of Spotify, a digital music service.",
     "homepage": "https://github.com/master131/BlockTheSpot",
     "license": {
-        "identifier": "Proprietary",
+        "identifier": "Freeware",
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
     "url": "https://github.com/master131/BlockTheSpot/raw/master/downgrade.bat",
