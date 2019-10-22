@@ -1,5 +1,5 @@
 {
-    "version": "2019.10.16",
+    "version": "2019.10.22",
     "description": "Command-line utility for downloading videos from YouTube and several other sites.",
     "homepage": "https://rg3.github.io/youtube-dl/",
     "license": "Unlicense",
@@ -10,8 +10,8 @@
         ],
         "vcredist": "extras/vcredist2010"
     },
-    "url": "https://github.com/rg3/youtube-dl/releases/download/2019.10.16/youtube-dl.exe",
-    "hash": "a6730abebf405c6f2f272f2071f3d7e8975c2b8d76a17b7ce4f03e9413f02449",
+    "url": "https://github.com/rg3/youtube-dl/releases/download/2019.10.22/youtube-dl.exe",
+    "hash": "b4b6dbbc07ce98ad1c7eb750c3b771ad7689da896e8370a96f511ebd3a240cf0",
     "bin": "youtube-dl.exe",
     "checkver": {
         "github": "https://github.com/rg3/youtube-dl"
