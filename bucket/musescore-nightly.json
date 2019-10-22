@@ -5,23 +5,17 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": [
-                "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-19-1116-master-c94866a-x86_64.7z",
-                "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-install-file-associations.reg",
-                "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/musescore-uninstall-file-associations.reg"
-            ],
-            "hash": [
-                "13d6367e5692918f90c64d6cc90baadc345b763076fc0107513a9ea2be81cc14",
-                "f9c6dadd64482f511f37cbad2372d0c0a59f7f15a3201ab7c8ad0190967ff63d",
-                "8148de55c78222f5c1abc306da54ae9624963db1ae365eaa67ec2a8b50f856f8"
-            ],
+            "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-19-1116-master-c94866a-x86_64.7z",
+            "hash": "13d6367e5692918f90c64d6cc90baadc345b763076fc0107513a9ea2be81cc14",
             "extract_dir": "MuseScoreNightly"
         }
     },
     "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "post_install": [
-        "$reg = \"$dir\\musescore-install-file-associations.reg\"",
-        "(Get-Content \"$reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content -Path \"$reg\""
+        "$null, $bucket = find_manifest($app)",
+        "$bucketdir = Find-BucketDirectory($bucket)",
+        "(Get-Content \"$bucketdir\\..\\scripts\\musescore-install-file-associations.reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content -Path \"$dir\\musescore-install-file-associations.reg\"",
+        "Copy-Item \"$bucketdir\\..\\scripts\\musescore-uninstall-file-associations.reg\" -Destination \"$dir\\musescore-uninstall-file-associations.reg\""
     ],
     "bin": [
         [
