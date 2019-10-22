@@ -10,13 +10,20 @@
             "extract_dir": "MuseScoreNightly"
         }
     },
-    "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
     "post_install": [
         "$null, $bucket = find_manifest($app)",
         "$bucketdir = Find-BucketDirectory($bucket)",
         "(Get-Content \"$bucketdir\\..\\scripts\\musescore-install-file-associations.reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content -Path \"$dir\\musescore-install-file-associations.reg\"",
-        "Copy-Item \"$bucketdir\\..\\scripts\\musescore-uninstall-file-associations.reg\" -Destination \"$dir\\musescore-uninstall-file-associations.reg\""
+        "Copy-Item \"$bucketdir\\..\\scripts\\musescore-uninstall-file-associations.reg\" -Destination \"$dir\\musescore-uninstall-file-associations.reg\"",
+        "regedit /s \"$dir\\musescore-install-file-associations.reg\"",
+        "Stop-Process -Name explorer"
     ],
+    "uninstaller": {
+        "script": [
+            "regedit /s \"$dir\\musescore-uninstall-file-associations.reg\"",
+            "Stop-Process -Name explorer"
+        ]
+    },
     "bin": [
         [
             "bin\\nightly.exe",
