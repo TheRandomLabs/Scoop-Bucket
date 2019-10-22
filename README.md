@@ -15,10 +15,6 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 * The installer and uninstaller open a webpage upon completion.
 
-### butterflow-ui
-
-* butterflow is packaged with butterflow-ui and does not need to be installed separately.
-
 ### Corsair iCUE
 
 * `scoop uninstall corsair-icue` should not be run as administrator until
@@ -40,15 +36,6 @@ Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
 * It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
 to be installed separately.
 
-### Icaros
-
-* Both `scoop install icaros` and `scoop uninstall icaros` require administrator privileges.
-
-### Logitech Gaming Software
-
-* Both `scoop install logitech-gaming-software` and `scoop uninstall logitech-gaming-software`
-require administrator privileges.
-
 ### Minecraft Launcher
 
 * The Minecraft launcher's version is defined as `nightly`. This means that
@@ -60,14 +47,6 @@ should be used to update it.
 * MultiMC's version is defined as `nightly`. This means that
 `scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
 should be used to update it.
-
-### NVIDIA Display Driver
-
-* This only installs the NVIDIA display driver.
-* Running `scoop uninstall nvidia-display-driver` or
-`scoop uninstall nvidia-display-driver-with-3d-vision` will only remove the local manifest.
-* Setup files are not kept after installation, so there is no point in running `scoop uninstall`
-after installation is complete, as that would prevent Scoop from checking for updates.
 
 ### Spotify with BlockTheSpot
 
