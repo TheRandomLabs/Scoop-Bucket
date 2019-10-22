@@ -1,24 +1,26 @@
 {
     "version": "office",
-    "description": "Family of client software, server software and services developed by Microsoft.",
+    "description": "Family of client software, server software and services developed by Microsoft. Only installs Excel, PowerPoint and Word.",
     "homepage": "https://www.office.com/",
     "license": "Proprietary",
-    "url": [
-        "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11901-20022.exe#/dl.7z",
-        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/install-office-365-proplus.xml",
-        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Bucket/master/scripts/uninstall-office-365-proplus.xml"
-    ],
-    "hash": [
-        "a04a7c7defad116e4cab15c682781229c660ff9cb91eebbf16d1be7b0e4e5531",
-        "c8721af61384369a57a16ba0c615566bd246e9aa652919e527a9b3c836fffe9d",
-        "8c20cfcbfc474d5159dc59f71fb35abeb2135879f767336631a47b0b0c0982e1"
-    ],
-    "pre_install": [
-        "if ($architecture -eq '32bit') {",
-        "    $install_config = \"$dir\\install-office-365-proplus.xml\"",
-        "    (Get-Content \"$install_config\").Replace('64', '32') | Set-Content -Path \"$install_config\"",
-        "}"
-    ],
+    "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11901-20022.exe#/dl.7z",
+    "hash": "a04a7c7defad116e4cab15c682781229c660ff9cb91eebbf16d1be7b0e4e5531",
+    "architecture": {
+        "32bit": {
+            "pre_install": [
+                "$null, $bucket = find_manifest($app)",
+                "$bucketdir = bucketdir($bucket)",
+                "(Get-Content \"$bucketdir\\..\\scripts\\install-office-365-proplus.xml\").Replace('64', '32') | Set-Content -Path \"$dir\\install-office-365-proplus.xml\""
+            ]
+        },
+        "64bit": {
+            "pre_install": [
+                "$null, $bucket = find_manifest($app)",
+                "$bucketdir = Find-BucketDirectory($bucket)",
+                "Copy-Item \"$bucketdir\\..\\scripts\\install-office-365-proplus.xml\" -Destination \"$dir\\install-office-365-proplus.xml\""
+            ]
+        }
+    },
     "installer": {
         "file": "setup.exe",
         "args": [
@@ -27,6 +29,11 @@
         ],
         "keep": true
     },
+    "post_install": [
+        "$null, $bucket = find_manifest($app)",
+        "$bucketdir = Find-BucketDirectory($bucket)",
+        "Copy-Item \"$bucketdir\\..\\scripts\\uninstall-office-365-proplus.xml\" -Destination \"$dir\\uninstall-office-365-proplus.xml\""
+    ],
     "uninstaller": {
         "script": "& \"$dir\\setup.exe\" /configure \"$dir\\uninstall-office-365-proplus.xml\""
     },
