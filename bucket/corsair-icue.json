@@ -41,7 +41,7 @@
     ],
     "checkver": {
         "url": "https://www.corsair.com/us/en/downloads",
-        "regex": "=\"CORSAIR iCUE (\\d+\\.\\d+\\.\\d+)"
+        "regex": "\"CORSAIR iCUE ([\\w.]+)"
     },
     "autoupdate": {
         "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_$version_release.msi#/setup.msix"
