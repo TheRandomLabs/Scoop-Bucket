@@ -3,7 +3,7 @@
     "description": "Tool for the customization of functions on Corsair peripherals and components.",
     "homepage": "https://www.corsair.com/us/en/icue",
     "license": "Freeware",
-    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.21.88_release.msi#/setup.msix",
+    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.21.88_release.msi#/setup.msi_",
     "hash": "41dadc906739120857868eaf1933b6286ba31a9ff5276607f0ba7adcf3a14755",
     "notes": [
         "Run the following PowerShell command as administrator to disable the Corsair Service from starting automatically:",
@@ -16,7 +16,7 @@
             "#     exit 1",
             "# }",
             "",
-            "Start-Process -Wait msiexec \"/i `\"$dir\\setup.msix`\" /qn INSTALLFOLDER=`\"$dir`\"\" -Verb RunAs",
+            "Start-Process -Wait msiexec \"/i `\"$dir\\setup.msi_`\" /qn INSTALLFOLDER=`\"$dir`\"\" -Verb RunAs",
             "Remove-Item -Path \"$env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Corsair\\iCUE.lnk\"",
             "# If the Corsair directory is empty, delete it",
             "Remove-Item -ErrorAction Ignore -Path \"$env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Corsair\""
@@ -29,7 +29,7 @@
             "#     exit 1",
             "# }",
             "",
-            "Start-Process -Wait msiexec \"/x `\"$dir\\setup.msix`\" /qn\" -Verb RunAs"
+            "Start-Process -Wait msiexec \"/x `\"$dir\\setup.msi_`\" /qn\" -Verb RunAs"
         ]
     },
     "bin": "iCUE.exe",
@@ -44,6 +44,6 @@
         "regex": "\"CORSAIR iCUE ([\\w.]+)"
     },
     "autoupdate": {
-        "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_$version_release.msi#/setup.msix"
+        "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_$version_release.msi#/setup.msi_"
     }
 }
