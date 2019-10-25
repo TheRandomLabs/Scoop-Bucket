@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-10-25-0729-master-362aa88-x86_64.7z",
-            "hash": "72b5b317f1d6da4b2111796181123bda290c66a8f8131a9364e1b69fe138e4b8",
-            "extract_dir": "MuseScoreNightly"
+            "hash": "72b5b317f1d6da4b2111796181123bda290c66a8f8131a9364e1b69fe138e4b8"
         }
     },
     "notes": "Register MuseScore file associations by running: \"$dir\\musescore-install-file-associations.reg\"",
+    "extract_dir": "MuseScoreNightly",
     "post_install": [
         "$null, $bucket = find_manifest($app)",
         "$bucketdir = Find-BucketDirectory($bucket)",
