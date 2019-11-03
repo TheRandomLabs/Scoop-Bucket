@@ -1,5 +1,5 @@
 {
-    "version": "8.4",
+    "version": "8.5",
     "description": "A free and safe disk partition tool.",
     "homepage": "https://www.disk-partition.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.disk-partition.com/eula/pa-standard.pdf"
     },
     "url": "http://www2.aomeisoftware.com/download/pa/PAssist_Std.exe",
-    "hash": "5ec38a1d6567d6fe77574db31c80b20d0da6dcf6c2c4d1e8f15fd0df2bcfb9cb",
+    "hash": "4503a9bae4961d3178cfb2c38f382734a7abaa3f7bf8972597331fa74a63632c",
     "pre_install": [
         "if (!(is_admin)) {",
         "    error \"Administrator rights are required to install $app.\"",
