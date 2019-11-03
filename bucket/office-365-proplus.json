@@ -3,8 +3,8 @@
     "description": "Family of client software, server software and services developed by Microsoft. Only installs Excel, PowerPoint and Word.",
     "homepage": "https://www.office.com/",
     "license": "Proprietary",
-    "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11901-20022.exe#/dl.7z",
-    "hash": "a04a7c7defad116e4cab15c682781229c660ff9cb91eebbf16d1be7b0e4e5531",
+    "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_12130-20272.exe#/dl.7z",
+    "hash": "f5bfe3877c7fbf9a1eb4bf680362642a2b307683fa6c9d26561f0648576a0de4",
     "architecture": {
         "32bit": {
             "pre_install": [
