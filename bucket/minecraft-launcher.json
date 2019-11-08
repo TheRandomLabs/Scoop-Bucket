@@ -14,5 +14,9 @@
             "Minecraft.exe",
             "Minecraft"
         ]
+    ],
+    "persist": [
+        "game",
+        "runtime"
     ]
 }
