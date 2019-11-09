@@ -35,7 +35,11 @@
         "Copy-Item \"$bucketdir\\..\\scripts\\uninstall-office-365-proplus.xml\" -Destination \"$dir\\uninstall-office-365-proplus.xml\""
     ],
     "uninstaller": {
-        "script": "& \"$dir\\setup.exe\" /configure \"$dir\\uninstall-office-365-proplus.xml\""
+        "file": "setup.exe",
+        "args": [
+            "/configure",
+            "$dir\\uninstall-office-365-proplus.xml"
+        ]
     },
     "checkver": {
         "url": "https://www.microsoft.com/en-au/download/confirmation.aspx?id=49117",
