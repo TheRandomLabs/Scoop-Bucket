@@ -1,0 +1,28 @@
+{
+    "version": "61bbc8f3665a51848eb4e9e474a1671a89c58995",
+    "description": "Tool for customizing the Spotify client.",
+    "homepage": "https://github.com/morpheusthewhite/spicetify-themes",
+    "license": "MIT",
+    "depends": "spicetify",
+    "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip",
+    "hash": "bebfa16292cb4b0b70763342610824dd01fb08d4da23458346d651e20ae413c0",
+    "extract_dir": "spicetify-themes-master",
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\" -Directory | ForEach-Object {",
+            "    Remove-Item -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\"",
+            "    Copy-Item -Recurse $_.FullName -Destination \"$env:USERPROFILE\\.spicetify\\Themes\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": "Get-ChildItem \"$dir\" | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\" }"
+    },
+    "checkver": {
+        "url": "https://github.com/morpheusthewhite/spicetify-themes",
+        "regex": "/commit/([a-z1-9]{40})"
+    },
+    "autoupdate": {
+        "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip"
+    }
+}

@@ -54,8 +54,18 @@ should be used to update it.
 `scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
 should be used to update it.
 
+### spicetify
+
+* spicetify should be installed locally and not globally.
+* Uninstalling spicetify also uninstalls spicetify-themes if it is installed.
+
+### spicetify-themes
+
+* spicetify-themes should be installed locally and not globally.
+
 ### Spotify with BlockTheSpot
 
+* Spotify with BlockTheSpot should be installed locally and not globally.
 * `scoop install spotify-blockthespot` must be run as administrator,
 which can be done most easily using `sudo`.
 * However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.

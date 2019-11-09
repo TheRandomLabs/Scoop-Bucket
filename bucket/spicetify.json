@@ -1,0 +1,28 @@
+{
+    "version": "0.9.5",
+    "description": "Tool for customizing the Spotify client.",
+    "homepage": "https://github.com/khanhas/spicetify-cli",
+    "license": "GPL-3.0-only",
+    "depends": "spotify-blockthespot",
+    "url": "https://github.com/khanhas/spicetify-cli/releases/download/v0.9.5/spicetify-0.9.5-windows-x64.zip",
+    "hash": "4e6fd6ec427b6ae94ae7325a007cd1d09ff1b2b1fbbec77d0bbc6207dfc8066c",
+    "installer": {
+        "script": [
+            "& \"$dir\\spicetify.exe\" config spotify_path $(scoop prefix spotify-blockthespot)",
+            "& \"$dir\\spicetify.exe\" config experimental_features 1",
+            "& \"$dir\\spicetify.exe\" backup apply enable-devtool"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($(scoop prefix spicetify-themes)) { scoop uninstall spicetify-themes }"
+        ]
+    },
+    "bin": "spicetify.exe",
+    "checkver": {
+        "github": "https://github.com/khanhas/spicetify-cli"
+    },
+    "autoupdate": {
+        "url": "https://github.com/khanhas/spicetify-cli/releases/download/v$version/spicetify-$version-windows-x64.zip"
+    }
+}
