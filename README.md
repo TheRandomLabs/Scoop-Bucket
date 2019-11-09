@@ -36,6 +36,12 @@ Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
 * It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
 to be installed separately.
 
+### Microsoft Edge Dev/Canary
+
+* Microsoft Edge Dev and Microsoft Edge Canary's versions are defined as `nightly`. This means that
+`scoop update microsoft-edge-[dev|canary] --force --no-cache` or
+`scoop update microsoft-edge-[dev|canary] -kf` should be used to update it.
+
 ### Minecraft Launcher
 
 * The Minecraft launcher's version is defined as `nightly`. This means that
