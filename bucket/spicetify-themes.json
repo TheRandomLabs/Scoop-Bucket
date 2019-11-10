@@ -9,9 +9,16 @@
     "extract_dir": "spicetify-themes-master",
     "installer": {
         "script": [
+            "$apply_default_theme = -not (Test-Path \"$env:USERPROFILE\\.spicetify\\Themes\\Nord\")",
+            "",
             "Get-ChildItem \"$dir\" -Directory | ForEach-Object {",
             "    Remove-Item -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\"",
             "    Copy-Item -Recurse $_.FullName -Destination \"$env:USERPROFILE\\.spicetify\\Themes\"",
+            "}",
+            "",
+            "if ($apply_default_theme) {",
+            "    spicetify config current_theme Nord",
+            "    spicetify apply",
             "}"
         ]
     },

@@ -62,6 +62,7 @@ should be used to update it.
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
+* Upon first installation, the theme "Nord" is applied by default.
 
 ### Spotify with BlockTheSpot
 
