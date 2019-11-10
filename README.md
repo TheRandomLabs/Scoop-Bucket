@@ -34,7 +34,8 @@ locally:
 
 	$ scoop install spicetify-themes
 
-I can recommend the "Nord" theme, which can be applied by running the following commands:
+I can recommend the [Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord)
+theme, which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
 	$ spicetify apply
