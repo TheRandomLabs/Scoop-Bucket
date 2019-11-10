@@ -91,7 +91,7 @@ should be used to update it.
 
 ### spicetify-cli
 
-* spicetify should be installed locally and not globally.
+* spicetify-cli should be installed locally and not globally.
 
 ### spicetify-themes
 
