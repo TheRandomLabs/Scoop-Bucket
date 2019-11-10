@@ -89,7 +89,7 @@ should be used to update it.
 `scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
 should be used to update it.
 
-### spicetify
+### spicetify-cli
 
 * spicetify should be installed locally and not globally.
 
