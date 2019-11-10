@@ -9,6 +9,41 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 	$ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 
+## Customizing Spotify
+
+A slightly outdated version of Spotify can be installed with
+[BlockTheSpot](https://github.com/master131/BlockTheSpot) to block ads:
+
+	$ sudo scoop install spotify-blockthespot
+
+Note that `spotify-blockthespot` should not be installed globally, as Spotify stores files in
+user-specific directories.
+
+Once Spotify with BlockTheSpot is installed,
+[spicetify-cli](https://github.com/khanhas/spicetify-cli) can be installed to customize the Spotify
+client:
+
+    $ scoop install spicetify-cli
+
+Again, `spicetify-cli` should be installed locally, as it also stores files in a user-specific
+location.
+
+[spicetify-themes](https://github.com/morpheusthewhite/spicetify-themes) can be installed for
+a collection of community-created themes for Spicetify. Obviously, this should also be installed
+locally:
+
+	$ scoop install spicetify-themes
+
+I can recommend the "Nord" theme, which can be applied by running the following commands:
+
+	$ spicetify config current_theme Nord
+	$ spicetify apply
+
+Note that `spicetify-themes` depends on `spicetify-cli`, which itself depends on
+`spotify-blockthespot`, so the following can be run to install all three:
+
+	$ sudo scoop install spicetify-themes
+
 ## Notes
 
 ### AOMEI Partition Assistant Standard
@@ -61,7 +96,6 @@ should be used to update it.
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
-* Upon first installation, the theme "Nord" is applied by default.
 
 ### Spotify with BlockTheSpot
 
