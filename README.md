@@ -16,12 +16,15 @@ A slightly outdated version of Spotify (1.1.4.197.g92d52c4f) can be installed wi
 
 	$ sudo scoop install spotify-blockthespot
 
-Note that `spotify-blockthespot` should not be installed globally, as Spotify stores files in
-user-specific directories.
+On the other hand, if you have Spotify Premium or do not care about ads, you can install the latest
+version of Spotify:
 
-Once Spotify with BlockTheSpot is installed,
-[spicetify-cli](https://github.com/khanhas/spicetify-cli) can be installed to customize the Spotify
-client:
+    $ scoop install spotify-latest
+
+Note that Spotify should not be installed globally, as it stores files in user-specific directories.
+
+Once Spotify is installed, [spicetify-cli](https://github.com/khanhas/spicetify-cli) can be
+installed to customize the Spotify client:
 
     $ scoop install spicetify-cli
 
@@ -39,11 +42,6 @@ theme, which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
 	$ spicetify apply
-
-Note that `spicetify-themes` depends on `spicetify-cli`, which itself depends on
-`spotify-blockthespot`, so the following can be run to install all three:
-
-	$ sudo scoop install spicetify-themes
 
 ## Notes
 
@@ -104,6 +102,13 @@ should be used to update it.
 * `scoop install spotify-blockthespot` must be run as administrator,
 which can be done most easily using `sudo`.
 * However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
+
+### Spotify (latest)
+
+* This is the latest version of Spotify.
+* Unlike [Ash258's version](https://github.com/Ash258/scoop-Ash258/blob/master/bucket/Spotify.json),
+this version installs completely silently and to the Scoop directory.
+* Spotify should be installed locally and not globally.
 
 ### QTTabBar
 
