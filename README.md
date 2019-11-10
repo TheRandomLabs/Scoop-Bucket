@@ -57,7 +57,6 @@ should be used to update it.
 ### spicetify
 
 * spicetify should be installed locally and not globally.
-* Uninstalling spicetify also uninstalls spicetify-themes if it is installed.
 
 ### spicetify-themes
 

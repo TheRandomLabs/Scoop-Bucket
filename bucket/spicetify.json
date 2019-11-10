@@ -18,10 +18,7 @@
         ]
     },
     "uninstaller": {
-        "script": [
-            "& \"$dir\\spicetify.exe\" restore",
-            "if ($(scoop prefix spicetify-themes)) { scoop uninstall spicetify-themes }"
-        ]
+        "script": "& \"$dir\\spicetify.exe\" restore"
     },
     "bin": "spicetify.exe",
     "checkver": {
