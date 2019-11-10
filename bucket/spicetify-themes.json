@@ -1,6 +1,6 @@
 {
     "version": "61bbc8f3665a51848eb4e9e474a1671a89c58995",
-    "description": "Tool for customizing the Spotify client.",
+    "description": "Community-created themes for Spicetify.",
     "homepage": "https://github.com/morpheusthewhite/spicetify-themes",
     "license": "MIT",
     "depends": "spicetify-cli",
