@@ -28,7 +28,7 @@ installed to customize the Spotify client:
 
     $ scoop install spicetify-cli
 
-Again, `spicetify-cli` should be installed locally, as it also stores files in a user-specific
+Again, spicetify-cli should be installed locally, as it also stores files in a user-specific
 location.
 
 [spicetify-themes](https://github.com/morpheusthewhite/spicetify-themes) can be installed for
@@ -42,6 +42,14 @@ theme, which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
 	$ spicetify apply
+
+To install spicetify-cli and apply a theme silently, the theme can be configured before installing
+spicetify-themes, and Spotify will automatically be killed after spicetify-themes is installed and
+the theme is applied:
+
+	$ scoop install spicetify-cli
+	$ spicetify config current_theme Nord
+	$ scoop install spicetify-themes
 
 ## Notes
 
@@ -92,10 +100,12 @@ should be used to update it.
 
 * spicetify-cli should be installed locally and not globally.
 * spicetify-cli requires either `spotify-blockthespot` or `spotify-latest` to be installed.
+* Installing or updating spicetify-cli automatically applies the spicetify configuration.
 
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
+* Installing or updating spicetify-themes automatically applies the spicetify configuration.
 
 ### Spotify with BlockTheSpot
 
