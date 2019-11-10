@@ -6,6 +6,13 @@
     "depends": "spicetify-cli",
     "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip",
     "hash": "bebfa16292cb4b0b70763342610824dd01fb08d4da23458346d651e20ae413c0",
+    "notes": [
+        "The Elementary theme requires the Open Sans and Raleway fonts:",
+        "sudo scoop install open-sans raleway",
+        "The ShadowCustom theme requires the Ubuntu font:",
+        "scoop bucket add nerd-fonts",
+        "sudo scoop install Ubuntu-NF"
+    ],
     "extract_dir": "spicetify-themes-master",
     "installer": {
         "script": [
@@ -22,6 +29,8 @@
             "    New-Item -ItemType Directory -Force -Path \"$env:APPDATA\\Spotify\" | Out-Null",
             "    Set-Content \"$env:APPDATA\\Spotify\\prefs\" \"app.last-launched-version=`\"$spotify_version`\"\"",
             "}",
+            "",
+            "(Get-Content \"$env:USERPROFILE\\.spicetify\\Themes\\Elementary\\user.css\").Replace('Google Sans', 'Open Sans') | Set-Content \"$env:USERPROFILE\\.spicetify\\Themes\\Elementary\\user.css\"",
             "",
             "spicetify config spotify_path \"$(Split-Path $(scoop which Spotify))\"",
             "spicetify backup apply enable-devtool",

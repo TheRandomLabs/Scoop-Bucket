@@ -107,6 +107,16 @@ should be used to update it.
 
 * spicetify-themes should be installed locally and not globally.
 * Installing or updating spicetify-themes automatically applies the spicetify configuration.
+* The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
+theme requires the Open Sans and Raleway fonts:
+
+	$ sudo scoop install open-sans raleway
+
+* The [ShadowCustom](https://github.com/morpheusthewhite/spicetify-themes/tree/master/ShadowCustom)
+theme requirews the Ubuntu font:
+
+	$ scoop bucket add nerd-fonts
+	$ sudo scoop install Ubuntu-NF
 
 ### Spotify with BlockTheSpot
 

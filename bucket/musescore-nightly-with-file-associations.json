@@ -13,7 +13,7 @@
     "post_install": [
         "$null, $bucket = find_manifest($app)",
         "$bucketdir = Find-BucketDirectory($bucket)",
-        "(Get-Content \"$bucketdir\\..\\scripts\\musescore-install-file-associations.reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content -Path \"$dir\\musescore-install-file-associations.reg\"",
+        "(Get-Content \"$bucketdir\\..\\scripts\\musescore-install-file-associations.reg\").Replace('$musescore', \"$dir\\bin\\nightly.exe\".Replace('\\', '\\\\')) | Set-Content \"$dir\\musescore-install-file-associations.reg\"",
         "Copy-Item \"$bucketdir\\..\\scripts\\musescore-uninstall-file-associations.reg\" -Destination \"$dir\\musescore-uninstall-file-associations.reg\"",
         "regedit /s \"$dir\\musescore-install-file-associations.reg\"",
         "Stop-Process -Name explorer"
