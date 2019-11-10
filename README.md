@@ -44,8 +44,9 @@ theme, which can be applied by running the following:
 	$ spicetify apply
 
 To install spicetify-cli and apply a theme silently, the theme can be configured before installing
-spicetify-themes, and Spotify will automatically be killed after spicetify-themes is installed and
-the theme is applied:
+spicetify-themes. When spicetify-theme is installed, the current configuration is applied,
+and if Spotify is not opened before it is installed, then Spotify is automatically killed after the
+configuration is applied:
 
 	$ scoop install spicetify-cli
 	$ spicetify config current_theme Nord
