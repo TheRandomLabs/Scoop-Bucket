@@ -91,6 +91,7 @@ should be used to update it.
 ### spicetify-cli
 
 * spicetify-cli should be installed locally and not globally.
+* spicetify-cli requires either `spotify-blockthespot` or `spotify-latest` to be installed.
 
 ### spicetify-themes
 
@@ -102,6 +103,7 @@ should be used to update it.
 * `scoop install spotify-blockthespot` must be run as administrator,
 which can be done most easily using `sudo`.
 * However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
+* This cannot be installed concurrently with `spotify-latest`.
 
 ### Spotify (latest)
 
@@ -109,6 +111,7 @@ which can be done most easily using `sudo`.
 * Unlike [Ash258's version](https://github.com/Ash258/scoop-Ash258/blob/master/bucket/Spotify.json),
 this version installs completely silently and to the Scoop directory.
 * Spotify should be installed locally and not globally.
+* This cannot be installed concurrently with `spotify-blockthespot`.
 
 ### QTTabBar
 
