@@ -125,6 +125,9 @@ should be used to update it.
 * spicetify-cli should be installed locally and not globally.
 * spicetify-cli requires either `spotify-blockthespot` or `spotify-latest` to be installed.
 * Installing or updating spicetify-cli automatically applies the spicetify configuration.
+* Experimental features and the
+[Keyboard Shortcut](https://github.com/khanhas/spicetify-cli/wiki/Extensions#keyboard-shortcut)
+extension are enabled by default. Developer tools are always enabled.
 
 ### spicetify-themes
 
