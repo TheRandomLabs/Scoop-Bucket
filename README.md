@@ -61,6 +61,20 @@ configuration is applied:
 	$ spicetify config current_theme Nord
 	$ scoop install spicetify-themes
 
+If you don't care about reading any of this and just want a quick way to install ad-blocked Spotify
+with the Elementary theme, copy and paste this into PowerShell:
+
+```powershell
+Set-ExecutionPolicy Unrestricted CurrentUser -Force
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+scoop install git sudo
+scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
+sudo scoop install spotify-blockthespot open-sans raleway
+scoop install spicetify-cli
+spicetify config current_theme Elementary
+scoop install spicetify-themes
+```
+
 ## Notes
 
 ### AOMEI Partition Assistant Standard
