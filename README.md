@@ -11,7 +11,7 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 ## Customizing Spotify
 
-A slightly outdated version of Spotify can be installed with
+A slightly outdated version of Spotify (1.1.4.197.g92d52c4f) can be installed with
 [BlockTheSpot](https://github.com/master131/BlockTheSpot) to block ads:
 
 	$ sudo scoop install spotify-blockthespot
