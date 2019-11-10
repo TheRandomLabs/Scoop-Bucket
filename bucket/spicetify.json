@@ -8,7 +8,7 @@
     "hash": "4e6fd6ec427b6ae94ae7325a007cd1d09ff1b2b1fbbec77d0bbc6207dfc8066c",
     "installer": {
         "script": [
-            "if (-not (Test-Path \"$env:USERPROFILE\\.spicetify\\config.ini\")) {",
+            "if (Test-Path \"$env:USERPROFILE\\.spicetify\\config.ini\") {",
             "    & \"$dir\\spicetify.exe\" apply",
             "} else {",
             "    & \"$dir\\spicetify.exe\" config spotify_path $(scoop prefix spotify-blockthespot)",
