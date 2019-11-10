@@ -1,6 +1,7 @@
 <!-- markdownlint-disable MD010 -->
 <!-- markdownlint-disable MD014 -->
 <!-- markdownlint-disable MD037 -->
+<!-- markdownlint-disable MD040 -->
 <!-- markdownlint-disable MD046 -->
 
 # Scoop Bucket
@@ -41,6 +42,14 @@ I can recommend the [Nord](https://github.com/morpheusthewhite/spicetify-themes/
 theme, which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
+	$ spicetify apply
+
+I can also recommend the
+[Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
+which requires Open Sans and Raleway to be installed:
+
+	$ sudo scoop install open-sans raleway
+	$ spicetify config current_theme Elementary
 	$ spicetify apply
 
 To install spicetify-cli and apply a theme silently, the theme can be configured before installing
@@ -110,13 +119,17 @@ should be used to update it.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
-	$ sudo scoop install open-sans raleway
+```
+$ sudo scoop install open-sans raleway
+```
 
 * The [ShadowCustom](https://github.com/morpheusthewhite/spicetify-themes/tree/master/ShadowCustom)
-theme requirews the Ubuntu font:
+theme requires the Ubuntu font:
 
-	$ scoop bucket add nerd-fonts
-	$ sudo scoop install Ubuntu-NF
+```
+$ scoop bucket add nerd-fonts
+$ sudo scoop install Ubuntu-NF
+```
 
 ### Spotify with BlockTheSpot
 
