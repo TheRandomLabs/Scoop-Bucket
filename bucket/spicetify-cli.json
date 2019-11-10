@@ -17,7 +17,7 @@
             "",
             "if (-not (Test-Path \"$env:APPDATA\\Spotify\\prefs\")) {",
             "    # spicetify-cli refuses to apply without a backup, and spicetify-cli needs a prefs file so it can tell which version of Spotify is currently installed",
-            "    $spotify_version = Select-String -Path $(scoop which Spotify) -Pattern '\\d\\.\\d\\.\\d+\\.\\d+\\.[a-z1-9]+' -AllMatches | % { $_.Matches } | % { $_.Value}",
+            "    $spotify_version = (Select-String -Path $(scoop which Spotify) -Pattern '\\d\\.\\d\\.\\d+\\.\\d+\\.[a-z1-9]+' | Select-Object -First 1).Matches[0].Groups[0].Value",
             "    New-Item -ItemType Directory -Force -Path \"$env:APPDATA\\Spotify\" | Out-Null",
             "    Set-Content \"$env:APPDATA\\Spotify\\prefs\" \"app.last-launched-version=`\"$spotify_version`\"\"",
             "}",
