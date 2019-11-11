@@ -123,7 +123,8 @@ should be used to update it.
 ### spicetify-cli
 
 * spicetify-cli should be installed locally and not globally.
-* spicetify-cli requires either `spotify-blockthespot` or `spotify-latest` to be installed.
+* spicetify-cli requires Spotify to be installed.
+`spotify-blockthespot` and `spotify-latest` are recommended.
 * Installing or updating spicetify-cli automatically applies the spicetify configuration.
 * Experimental features and the
 [Keyboard Shortcut](https://github.com/khanhas/spicetify-cli/wiki/Extensions#keyboard-shortcut)
@@ -132,6 +133,9 @@ extension are enabled by default. Developer tools are always enabled.
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
+* spicetify-themes requires Spotify to be installed.
+`spotify-blockthespot` and `spotify-latest` are recommended.
+spicetify-cli is declared as a dependency and is installed automatically.
 * Installing or updating spicetify-themes automatically applies the spicetify configuration.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
