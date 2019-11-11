@@ -4,7 +4,7 @@
     "homepage": "https://www.ffmpeg.org/",
     "license": "LGPL-2.1-only",
     "depends": "audacity",
-    "url": "http://web.archive.org/web/20150922095013if_/http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-2.2.11-win32-shared.7z",
+    "url": "https://github.com/TheRandomLabs/Scoop-Bucket-Binaries/raw/master/ffmpeg-2.2.11-win32-shared.7z",
     "hash": "a60a9f9466b967d5bef8f9b242b928f98516f756c7c5ea06660b37c6cdbc6bfc",
     "extract_dir": "ffmpeg-2.2.11-win32-shared\\bin",
     "post_install": [
