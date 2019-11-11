@@ -48,7 +48,8 @@ I can also recommend the
 [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
 which requires Open Sans and Raleway to be installed:
 
-	$ sudo scoop install open-sans raleway
+	$ scoop bucket add nerd-fonts
+	$ sudo scoop install Open-Sans Raleway
 	$ spicetify config current_theme Elementary
 	$ spicetify apply
 
@@ -68,8 +69,9 @@ with the Elementary theme, copy and paste this into PowerShell:
 Set-ExecutionPolicy Unrestricted CurrentUser -Force
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 scoop install git sudo
+scoop bucket add nerd-fonts
 scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
-sudo scoop install spotify-blockthespot open-sans raleway
+sudo scoop install spotify-blockthespot Open-Sans Raleway
 scoop install spicetify-cli
 spicetify config current_theme Elementary
 scoop install spicetify-themes
@@ -141,7 +143,8 @@ spicetify-cli is declared as a dependency and is installed automatically.
 theme requires the Open Sans and Raleway fonts:
 
 ```
-$ sudo scoop install open-sans raleway
+$ scoop bucket add nerd-fonts
+$ sudo scoop install Open-Sans Raleway
 ```
 
 * The [ShadowCustom](https://github.com/morpheusthewhite/spicetify-themes/tree/master/ShadowCustom)
