@@ -66,7 +66,7 @@ If you don't care about reading any of this and just want a quick way to install
 with the Elementary theme, copy and paste this into PowerShell:
 
 ```powershell
-Set-ExecutionPolicy Unrestricted CurrentUser -Force
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 scoop install git sudo
 scoop bucket add nerd-fonts
