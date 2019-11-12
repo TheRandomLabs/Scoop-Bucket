@@ -38,6 +38,10 @@ locally:
 
 	$ scoop install spicetify-themes
 
+[google-spicetify](https://github.com/khanhas/google-spicetify) is also available:
+
+	$ scoop install google-spicetify
+
 I can recommend the [Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord)
 theme, which can be applied by running the following:
 
