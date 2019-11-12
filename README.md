@@ -108,6 +108,13 @@ Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
 * It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
 to be installed separately.
 
+### google-spicetify
+
+* google-spicetify should be installed locally and not globally.
+* google-spicetify requires Spotify to be installed.
+`spotify-blockthespot` and `spotify-latest` are recommended.
+* Installing or updating google-spicetify automatically applies the spicetify configuration.
+
 ### Minecraft Launcher
 
 * The Minecraft launcher's version is defined as `nightly`. This means that
@@ -128,7 +135,7 @@ should be used to update it.
 * Installing or updating spicetify-cli automatically applies the spicetify configuration.
 * Experimental features and the
 [Keyboard Shortcut](https://github.com/khanhas/spicetify-cli/wiki/Extensions#keyboard-shortcut)
-extension are enabled by default. Developer tools are always enabled.
+extension are enabled by default.
 
 ### spicetify-themes
 
