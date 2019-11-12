@@ -8,15 +8,15 @@
     "hash": "a60a9f9466b967d5bef8f9b242b928f98516f756c7c5ea06660b37c6cdbc6bfc",
     "extract_dir": "ffmpeg-2.2.11-win32-shared\\bin",
     "post_install": [
-        "Copy-Item -Path \"$dir\\*.dll\" -Destination \"$(appdir audacity $global)\\current\"",
-        "Copy-Item -Path \"$dir\\ffmpeg.exe\" -Destination \"$(appdir audacity $global)\\current\""
+        "Copy-Item \"$dir\\*.dll\" -Destination \"$(appdir audacity $global)\\current\"",
+        "Copy-Item \"$dir\\ffmpeg.exe\" -Destination \"$(appdir audacity $global)\\current\""
     ],
     "uninstaller": {
         "script": [
-            "Remove-Item -Path \"$(appdir audacity $global)\\current\\av*.dll\"",
-            "Remove-Item -Path \"$(appdir audacity $global)\\current\\postproc*.dll\"",
-            "Remove-Item -Path \"$(appdir audacity $global)\\current\\sw*.dll\"",
-            "Remove-Item -Path \"$(appdir audacity $global)\\current\\ffmpeg.exe\""
+            "Remove-Item \"$(appdir audacity $global)\\current\\av*.dll\"",
+            "Remove-Item \"$(appdir audacity $global)\\current\\postproc*.dll\"",
+            "Remove-Item \"$(appdir audacity $global)\\current\\sw*.dll\"",
+            "Remove-Item \"$(appdir audacity $global)\\current\\ffmpeg.exe\""
         ]
     }
 }
