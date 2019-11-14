@@ -1,6 +1,6 @@
 {
     "version": "2019.11.05",
-    "description": "Command-line utility for downloading videos from YouTube and several other sites.",
+    "description": "Download videos from YouTube.com (and a few more sites) using command line.",
     "homepage": "https://rg3.github.io/youtube-dl/",
     "license": "Unlicense",
     "suggest": {
