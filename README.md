@@ -115,18 +115,6 @@ to be installed separately.
 `spotify-blockthespot` and `spotify-latest` are recommended.
 * Installing or updating google-spicetify automatically applies the spicetify configuration.
 
-### Minecraft Launcher
-
-* The Minecraft launcher's version is defined as `nightly`. This means that
-`scoop update minecraft-launcher --force --no-cache` or `scoop update minecraft-launcher -kf`
-should be used to update it.
-
-### MultiMC Development Version
-
-* MultiMC's version is defined as `nightly`. This means that
-`scoop update multimc-dev --force --no-cache` or `scoop update multimc-dev -kf`
-should be used to update it.
-
 ### spicetify-cli
 
 * spicetify-cli should be installed locally and not globally.
