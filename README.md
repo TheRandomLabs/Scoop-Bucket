@@ -174,10 +174,3 @@ this version installs completely silently and to the Scoop directory.
 * I'll submit this as a pull request to the
 [nonportable](https://github.com/oltolm/scoop-nonportable) bucket once
 [lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
-
-### youtube-dl No Depends
-
-* This is the same as `youtube-dl` from the main bucket, but instead of depending on `ffmpeg`, it
-suggests either `ffmpeg` or `ffmpeg-nightly`.
-* Nightly builds work well virtually all of the time and are constantly improved upon, so it can
-make sense to prefer `ffmpeg-nightly`.
