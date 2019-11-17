@@ -171,6 +171,5 @@ this version installs completely silently and to the Scoop directory.
 
 ### VirtualBox with Extension Pack
 
-* I'll submit this as a pull request to the
-[nonportable](https://github.com/oltolm/scoop-nonportable) bucket once
-[lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
+* I'll move this to the [nonportable](https://github.com/TheRandomLabs/scoop-nonportable) bucket
+once [lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
