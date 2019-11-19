@@ -28,7 +28,7 @@
             "}",
             "",
             "Get-ChildItem $dir -Directory | ForEach-Object {",
-            "    Remove-Item -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\"",
+            "    Remove-Item -ErrorAction Ignore -Recurse \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\"",
             "    Copy-Item -Recurse $_.FullName -Destination \"$env:USERPROFILE\\.spicetify\\Themes\"",
             "}",
             "",
