@@ -1,5 +1,5 @@
 {
-    "version": "caaeb1b3c663697bd0804fbecf084ff6b30156a1",
+    "version": "caaeb1",
     "description": "Community-created themes for Spicetify.",
     "homepage": "https://github.com/morpheusthewhite/spicetify-themes",
     "license": "MIT",
@@ -67,7 +67,7 @@
     },
     "checkver": {
         "url": "https://github.com/morpheusthewhite/spicetify-themes",
-        "regex": "/commit/([a-z0-9]{40})"
+        "regex": "/commit/([a-z0-9]{6})"
     },
     "autoupdate": {
         "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip"
