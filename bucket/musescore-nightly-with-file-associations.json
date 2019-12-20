@@ -1,12 +1,12 @@
 {
-    "version": "2019-12-19-2025-master-57509c2",
+    "version": "2019-12-20-1250-master-b77a20d",
     "description": "Music notation editor with an easy-to-use WYSIWYG interface.",
     "homepage": "https://musescore.org/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-12-19-2025-master-57509c2-x86_64.7z",
-            "hash": "2fd5055a0fb17b826ce0ae869d7181ca3a37324b9362483a9e24378f81cc80be"
+            "url": "https://ftp.osuosl.org/pub/musescore-nightlies/windows/MuseScoreNightly-2019-12-20-1250-master-b77a20d-x86_64.7z",
+            "hash": "38d5422d910ea9df9106998c003f57b7871e824dd160be6a5a6a891708c5bfa6"
         }
     },
     "extract_dir": "MuseScoreNightly",
