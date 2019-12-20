@@ -4,7 +4,7 @@
     "homepage": "https://www.office.com/",
     "license": "Proprietary",
     "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_12130-20272.exe#/dl.7z",
-    "hash": "f5bfe3877c7fbf9a1eb4bf680362642a2b307683fa6c9d26561f0648576a0de4",
+    "hash": "e94ca0062ed610cded2399e22ad2cab6377989cb0744ceed1cf3500c9810c45d",
     "architecture": {
         "32bit": {
             "pre_install": [
