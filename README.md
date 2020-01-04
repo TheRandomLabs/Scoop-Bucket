@@ -42,13 +42,21 @@ locally:
 
 	$ scoop install google-spicetify
 
-I can recommend the [Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord)
+I can recommend the
+[Adapta-Nokto](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Adapta-Nokto)
 theme, which can be applied by running the following:
+
+	$ spicetify config current_theme Adapta-Nokto
+	$ spicetify apply
+
+I can also recommend the
+[Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord) theme,
+which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
 	$ spicetify apply
 
-I can also recommend the
+I also like the
 [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
 which requires Open Sans and Raleway to be installed:
 
@@ -80,6 +88,9 @@ scoop install spicetify-cli
 spicetify config current_theme Elementary
 scoop install spicetify-themes
 ```
+
+As you can see above, the theme is configured before it is actually installed.
+When `spicetify-themes` is installed, the theme will automatically be applied.
 
 ## Notes
 
