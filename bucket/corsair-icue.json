@@ -4,7 +4,7 @@
     "homepage": "https://www.corsair.com/us/en/icue",
     "license": "Freeware",
     "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.24.52_release.msi#/setup.msi_",
-    "hash": "5b0549459d77c97e1d73466864161eadd0d0e7b67ff9b1e3facc6a4aeb18d90f",
+    "hash": "e87dd9de5bfbd645fea5650a5e4847df17a1bc231289ec70b1faabbd852fa834",
     "notes": [
         "Run the following PowerShell command as administrator to disable the Corsair Service from starting automatically:",
         "Set-Service -Name CorsairService -StartupType Manual"
