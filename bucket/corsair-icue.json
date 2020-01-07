@@ -1,10 +1,10 @@
 {
-    "version": "3.23.66",
+    "version": "3.24.52",
     "description": "Tool for the customization of functions on Corsair peripherals and components.",
     "homepage": "https://www.corsair.com/us/en/icue",
     "license": "Freeware",
-    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.23.66_release.msi#/setup.msi_",
-    "hash": "478392f62def521ec4b149d90a582a9173ca25660e104835c215e73f88f38711",
+    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_3.24.52_release.msi#/setup.msi_",
+    "hash": "5b0549459d77c97e1d73466864161eadd0d0e7b67ff9b1e3facc6a4aeb18d90f",
     "notes": [
         "Run the following PowerShell command as administrator to disable the Corsair Service from starting automatically:",
         "Set-Service -Name CorsairService -StartupType Manual"
