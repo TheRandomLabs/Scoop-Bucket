@@ -15,11 +15,11 @@
         "64bit": {
             "url": [
                 "https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1.2-135663-Win.exe#/VBoxSetup.exe",
-                "https://download.virtualbox.org/virtualbox/6.0.16/Oracle_VM_VirtualBox_Extension_Pack-6.0.16.vbox-extpack"
+                "https://download.virtualbox.org/virtualbox/6.1.2/Oracle_VM_VirtualBox_Extension_Pack-6.1.2.vbox-extpack"
             ],
             "hash": [
                 "703e7c9bcbdda0cd0040049dfcc754c0fb858b6d786a6033dc5d68f21b5fff99",
-                "51a3f8240c5d357f1c007fdc3c39e286905d53a990d90b1abd8fbcd425231460"
+                "54047312d836c17ef0939410f755cb5a23e3037ec402198cc97f755181b25632"
             ]
         }
     },
