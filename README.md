@@ -132,9 +132,9 @@ to be installed separately.
 * spicetify-cli requires Spotify to be installed.
 `spotify-blockthespot` and `spotify-latest` are recommended.
 * Installing or updating spicetify-cli automatically applies the spicetify configuration.
-* Experimental features and the
-[Keyboard Shortcut](https://github.com/khanhas/spicetify-cli/wiki/Extensions#keyboard-shortcut)
-extension are enabled by default.
+* Experimental features and all
+[default extensions](https://github.com/khanhas/spicetify-cli/wiki/Extensions) apart from
+Auto Skip Videos and Trash Bin are enabled by default.
 
 ### spicetify-themes
 
