@@ -9,17 +9,17 @@
             "java/openjdk"
         ]
     },
-    "url": "https://github.com/deathmarine/Luyten/releases/download/v0.5.4/luyten-0.5.4.exe",
+    "url": "https://github.com/deathmarine/Luyten/releases/download/v0.5.4/luyten-0.5.4.exe#/luyten.exe",
     "hash": "02691aadd38c230f17c6d680253188549d8086d2537f22808d38f3f5d3f0e466",
-    "bin": "Luyten.exe",
+    "bin": "luyten.exe",
     "shortcuts": [
         [
-            "Luyten.exe",
+            "luyten.exe",
             "Luyten"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/deathmarine/Luyten/releases/download/v$version/luyten-$version.exe"
+        "url": "https://github.com/deathmarine/Luyten/releases/download/v$version/luyten-$version.exe#/luyten.exe"
     }
 }
