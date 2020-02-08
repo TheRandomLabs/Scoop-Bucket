@@ -1,0 +1,18 @@
+{
+    "version": "1.4.2",
+    "description": "EDID editor with a focus on custom resolutions.",
+    "homepage": "https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU",
+    "license": "Freeware",
+    "url": "https://www.monitortests.com/cru-1.4.2.zip",
+    "hash": "5ec843bf11e71f818a5993a67008770ab2933417894cf5e27591f849923f7c7d",
+    "shortcuts": [
+        [
+            "CRU.exe",
+            "Custom Resolution Utility"
+        ]
+    ],
+    "checkver": "cru-([\\d.]+)\\.zip",
+    "autoupdate": {
+        "url": "https://www.monitortests.com/cru-$version.zip"
+    }
+}
