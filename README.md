@@ -112,6 +112,10 @@ $icue_path = "$(Split-Path(scoop prefix corsair-icue))\*"
 Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
 ```
 
+### Custom Resolution Utility
+
+* This is the same as `cru` from the `extras` bucket, but it also has better shortcuts and shims.
+
 ### FFmpeg for Audacity
 
 * This version (2.2.11) is more up-to-date than the one found in
