@@ -1,11 +1,14 @@
+name: Pull Request Comments
+
 on:
   issue_comment:
     types: [created]
-name: Pull Request Comments
+
 jobs:
-  pullRequestHandler:
+  pullRequestValidator:
     name: Pull Request Validator
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@master
       - name: PullRequestHandler

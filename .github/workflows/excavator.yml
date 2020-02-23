@@ -1,11 +1,14 @@
+name: Excavator
+
 on:
   schedule:
     - cron: "0 * * * *"
-name: Excavator
+
 jobs:
-  excavate:
+  excavator:
     name: Excavator
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@master
       - name: Excavate

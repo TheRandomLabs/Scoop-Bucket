@@ -1,11 +1,14 @@
+name: Pull Requests
+
 on:
   pull_request:
     types: [opened]
-name: Pull Requests
+
 jobs:
-  pullRequestHandler:
+  pullRequestValidator:
     name: Pull Request Validator
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@master
       - name: Pull Request Validation
