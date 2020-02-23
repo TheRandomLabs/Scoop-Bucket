@@ -1,0 +1,16 @@
+on:
+  issue_comment:
+    types: [created]
+name: Pull Request Comments
+jobs:
+  pullRequestHandler:
+    name: Pull Request Validator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: PullRequestHandler
+        uses: Ash258/Scoop-GithubActions@stable
+        if: startsWith(github.event.comment.body, '/verify')
+        env:
+          GITH_EMAIL: therandomlabsinc@gmail.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
