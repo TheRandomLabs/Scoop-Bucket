@@ -1,5 +1,5 @@
 {
-    "version": "1.1.31.703.g256add22",
+    "version": "1.1.30.658.gf13cde74",
     "description": "Digital music service.",
     "homepage": "https://www.spotify.com/",
     "license": {
@@ -64,9 +64,9 @@
     ],
     "checkver": {
         "script": [
-            "Invoke-WebRequest https://download.scdn.co/SpotifySetup.exe -OutFile \"SpotifySetup.exe\"",
-            "$version = Get-ChildItem SpotifySetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
-            "Remove-Item \"SpotifySetup.exe\"",
+            "Invoke-WebRequest https://download.spotify.com/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
+            "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
+            "Remove-Item \"SpotifyFullSetup.exe\"",
             "return \"$version\""
         ],
         "regex": "(.+)"
