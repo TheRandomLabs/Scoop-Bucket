@@ -12,13 +12,7 @@ My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
 
 ## Customizing Spotify
 
-A slightly outdated version of Spotify (1.1.4.197.g92d52c4f) can be installed with
-[BlockTheSpot](https://github.com/master131/BlockTheSpot) to block ads:
-
-	$ sudo scoop install spotify-blockthespot
-
-On the other hand, if you have Spotify Premium or do not care about ads, you can install the latest
-version of Spotify:
+First, the latest version of Spotify should be installed:
 
     $ scoop install spotify-latest
 
@@ -74,6 +68,12 @@ configuration is applied:
 	$ spicetify config current_theme Nord
 	$ scoop install spicetify-themes
 
+BlockTheSpot can be installed to block advertisements:
+
+	$ scoop install blockthespot
+
+All of the above packages can be updated through Scoop.
+
 If you don't care about reading any of this and just want a quick way to install ad-blocked Spotify
 with the Elementary theme, copy and paste this into PowerShell:
 
@@ -83,8 +83,8 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.
 scoop install git sudo
 scoop bucket add nerd-fonts
 scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
-sudo scoop install spotify-blockthespot Open-Sans Raleway
-scoop install spicetify-cli
+sudo scoop install spotify-latest Open-Sans Raleway
+scoop install blockthespot spicetify-cli
 spicetify config current_theme Elementary
 scoop install spicetify-themes
 ```
@@ -165,6 +165,9 @@ $ sudo scoop install Ubuntu-NF
 
 ### Spotify with BlockTheSpot
 
+* This is an outdated version of Spotify (1.1.4.197.g92d52c4f) with BlockTheSpot.
+* Spotify's built-in updater is disabled.
+* This should only be used if BlockTheSpot does not work with the latest version of Spotify.
 * Spotify with BlockTheSpot should be installed locally and not globally.
 * `scoop install spotify-blockthespot` must be run as administrator,
 which can be done most easily using `sudo`.
@@ -176,6 +179,7 @@ which can be done most easily using `sudo`.
 * This is the latest version of Spotify.
 * Unlike [Ash258's version](https://github.com/Ash258/scoop-Ash258/blob/master/bucket/Spotify.json),
 this version installs completely silently and to the Scoop directory.
+* Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
 * Spotify should be installed locally and not globally.
 * This cannot be installed concurrently with `spotify-blockthespot`.
 
