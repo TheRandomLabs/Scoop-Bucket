@@ -43,9 +43,9 @@
             "",
             "$spotify_running = Get-Process Spotify -ErrorAction SilentlyContinue",
             "",
-            "spicetify config spotify_path \"$(Resolve-Path(Split-Path $spotify_path))\"",
-            "spicetify restore | Out-Null # If a backup has already been made, restore it first",
-            "spicetify backup apply | Out-Null",
+            "spicetify config spotify_path \"$(Split-Path $spotify_path)\" --quiet",
+            "spicetify restore --quiet # If a backup has already been made, restore it first",
+            "spicetify backup apply --quiet",
             "",
             "if (-not $spotify_running) {",
             "    ($job = Start-Job {",
@@ -57,7 +57,7 @@
             "        $spotify_process | ForEach-Object { Stop-Process -Id $_.Id }",
             "    }) | Out-Null",
             "",
-            "    $job | Wait-Job -Timeout 5",
+            "    $job | Wait-Job -Timeout 5 | Out-Null",
             "    $job.StopJob()",
             "}"
         ]
