@@ -62,7 +62,7 @@
             "Spotify"
         ]
     ],
-    "checkver": {
+    "checkver_": {
         "script": [
             "Invoke-WebRequest https://download.spotify.com/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
             "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
