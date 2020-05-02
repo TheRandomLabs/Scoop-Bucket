@@ -1,5 +1,5 @@
 {
-    "version": "2b9479",
+    "version": "-",
     "description": "Google-style theme for Spicetify.",
     "homepage": "https://github.com/khanhas/google-spicetify",
     "license": "GPL-3.0-only",
@@ -62,7 +62,7 @@
         "script": "Get-ChildItem \"$dir\" | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\" }"
     },
     "checkver": {
-        "url": "https://api.github.com/repos/khanas/google-spicetify/commits",
+        "url": "https://api.github.com/repos/khanhas/google-spicetify/commits",
         "regex": "date.+([\\d-]+)"
     },
     "autoupdate": {
