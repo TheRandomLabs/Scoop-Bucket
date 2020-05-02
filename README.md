@@ -6,7 +6,8 @@
 
 # Scoop Bucket
 
-My personal [Scoop](https://github.com/lukesampson/scoop) bucket.
+My personal [Scoop](https://github.com/lukesampson/scoop) bucket. I generally only add manifests
+here if there is something that is likely to make them unfit for any of the known buckets.
 
 	$ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 
