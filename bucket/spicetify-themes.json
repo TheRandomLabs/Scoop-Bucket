@@ -67,7 +67,7 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/morpheusthewhite/spicetify-themes/commits",
-        "jsonpath": "$.[0].sha"
+        "jsonpath": "$.[0].commit.author.date"
     },
     "autoupdate": {
         "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip"
