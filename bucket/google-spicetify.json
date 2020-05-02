@@ -62,8 +62,8 @@
         "script": "Get-ChildItem \"$dir\" | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\" }"
     },
     "checkver": {
-        "url": "https://github.com/khanhas/google-spicetify/commits/master",
-        "regex": "/commit/([a-z0-9]{6})"
+        "url": "https://api.github.com/repos/khanas/google-spicetify/commits",
+        "jsonpath": "$.[0].commit.author.date"
     },
     "autoupdate": {
         "url": "https://github.com/khanhas/google-spicetify/archive/master.zip"
