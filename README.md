@@ -148,6 +148,10 @@ to be installed separately.
 are automatically registered.
 * This is a concept that I'd like to eventually expand to other manifests.
 
+### Neovim Dev
+
+* This is the same as `neovim-nightly` in the `versions` bucket, except that autoupdate is enabled.
+
 ### ShellExView
 
 * This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
