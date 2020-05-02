@@ -98,6 +98,13 @@ When `spicetify-themes` is installed, the theme will automatically be applied.
 
 * The installer and uninstaller open a webpage upon completion.
 
+### BlockTheSpot
+
+* This blocks advertisements for the latest version of Spotify.
+* BlockTheSpot depends on `spotify-latest` and should thus be installed locally.
+* This is not an executable program. `spotify-latest` will be patched automatically every time this
+package is installed or updated.
+
 ### Corsair iCUE
 
 * `scoop uninstall corsair-icue` should not be run as administrator until
@@ -127,14 +134,27 @@ to be installed separately.
 
 * google-spicetify should be installed locally and not globally.
 * google-spicetify requires Spotify to be installed.
-`spotify-blockthespot` and `spotify-latest` are recommended.
 * Installing or updating google-spicetify automatically applies the spicetify configuration.
+
+### Luyten
+
+* I'll PR this to the `extras` bucket once
+[#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
+
+### MuseScore Nightly with File Associations
+
+* This is identical to `musescore-nightly` in the `versions` bucket, except that file associations
+are automatically registered.
+* This is a concept that I'd like to eventually expand to other manifests.
+
+### ShellExView
+
+* This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
 
 ### spicetify-cli
 
 * spicetify-cli should be installed locally and not globally.
 * spicetify-cli requires Spotify to be installed.
-`spotify-blockthespot` and `spotify-latest` are recommended.
 * Installing or updating spicetify-cli automatically applies the spicetify configuration.
 * Experimental features and all
 [default extensions](https://github.com/khanhas/spicetify-cli/wiki/Extensions) apart from
@@ -144,7 +164,6 @@ Auto Skip Videos and Trash Bin are enabled by default.
 
 * spicetify-themes should be installed locally and not globally.
 * spicetify-themes requires Spotify to be installed.
-`spotify-blockthespot` and `spotify-latest` are recommended.
 spicetify-cli is declared as a dependency and is installed automatically.
 * Installing or updating spicetify-themes automatically applies the spicetify configuration.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
@@ -190,5 +209,19 @@ this version installs completely silently and to the Scoop directory.
 
 ### VirtualBox with Extension Pack
 
-* I'll move this to the [nonportable](https://github.com/TheRandomLabs/scoop-nonportable) bucket
-once [lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
+* I'll move this to the `nonportable` bucket once
+[lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
+
+### Win10 Initial Setup Script
+
+* This is a PowerShell script for the automation of routine setup tasks completed on fresh
+installations of Windows.
+* Default setup can be run via `default-win10-initial-setup`.
+* See [here](https://github.com/Disassembler0/Win10-Initial-Setup-Script#advanced-usage)
+for advanced usage.
+
+### Windows SDK Signing Tools
+
+* This is just `cert2spc.exe`, `makecat.exe` and `signtool.exe` extracted from the Windows SDK.
+* This is useful for those who need to sign executables but have no need for the rest of the
+Windows SDK.
