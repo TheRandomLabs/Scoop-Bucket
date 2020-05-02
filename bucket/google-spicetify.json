@@ -1,5 +1,5 @@
 {
-    "version": "-",
+    "version": "2019-06-08",
     "description": "Google-style theme for Spicetify.",
     "homepage": "https://github.com/khanhas/google-spicetify",
     "license": "GPL-3.0-only",
@@ -63,7 +63,7 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/khanhas/google-spicetify/commits",
-        "regex": "date.+([\\d-]+)"
+        "regex": "date.+\"([\\d-]+)T"
     },
     "autoupdate": {
         "url": "https://github.com/khanhas/google-spicetify/archive/master.zip"
