@@ -207,11 +207,6 @@ this version installs completely silently and to the Scoop directory.
 * The installer shows a dialog that requires user interaction.
 * The installer may show an error related to start menu items. This can be safely ignored.
 
-### VirtualBox with Extension Pack
-
-* I'll move this to the `nonportable` bucket once
-[lukesampson/scoop#3518](https://github.com/lukesampson/scoop/pull/3518) is merged.
-
 ### Win10 Initial Setup Script
 
 * This is a PowerShell script for the automation of routine setup tasks completed on fresh
