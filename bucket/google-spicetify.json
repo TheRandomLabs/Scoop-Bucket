@@ -63,7 +63,7 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/khanas/google-spicetify/commits",
-        "jsonpath": "$.[0].commit.author.date"
+        "regex": "date.+([\\d-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/khanhas/google-spicetify/archive/master.zip"
