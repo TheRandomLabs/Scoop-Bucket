@@ -139,7 +139,7 @@ to be installed separately.
 ### Luyten
 
 * I'll PR this to the `extras` bucket once
-[#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
+[deathmarine/Luyten#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
 
 ### MuseScore Nightly with File Associations
 

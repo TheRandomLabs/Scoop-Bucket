@@ -1,6 +1,6 @@
 {
     "version": "1.1.4.197",
-    "description": "Ad-free version of Spotify, a digital music service.",
+    "description": "An old version of Spotify, a digital music service, with BlockTheSpot to block advertisements.",
     "homepage": "https://github.com/master131/BlockTheSpot",
     "license": {
         "identifier": "Freeware",
