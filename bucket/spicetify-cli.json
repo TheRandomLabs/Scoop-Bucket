@@ -1,5 +1,5 @@
 {
-    "version": "0.9.8",
+    "version": "0.9.9",
     "description": "Tool for customizing the Spotify client.",
     "homepage": "https://github.com/khanhas/spicetify-cli",
     "license": "GPL-3.0-only",
@@ -9,8 +9,8 @@
             "spotify-latest"
         ]
     },
-    "url": "https://github.com/khanhas/spicetify-cli/releases/download/v0.9.8/spicetify-0.9.8-windows-x64.zip",
-    "hash": "e42bf2fcaa27c3a76a7204a6df71de614d29f0f9e3d07928c99153ff4143cfcc",
+    "url": "https://github.com/khanhas/spicetify-cli/releases/download/v0.9.9/spicetify-0.9.9-windows-x64.zip",
+    "hash": "66a22603ad57a3ac2c73ab87cc092a110916367c70a6868c8b02d53f464a5a57",
     "installer": {
         "script": [
             "$spotify_path = scoop which Spotify",
