@@ -15,5 +15,6 @@ $config_exists = Test-Path "$env:USERPROFILE\.spicetify\config.ini"
 
 if (-not $config_exists) {
     & "$PSScriptRoot\spicetify.exe" config experimental_features 1 --quiet
+    & "$PSScriptRoot\spicetify.exe" config fastUser_switching 1 --quiet
     & "$PSScriptRoot\spicetify.exe" config extensions "autoSkipExplicit.js|keyboardShortcut.js|queueAll.js|shuffle+.js|webnowplaying.js" --quiet
 }
