@@ -33,13 +33,7 @@
         "    spicetify restore backup apply --quiet --no-restart",
         "}",
         "",
-        "$blockthespot_path = \"$(appdir blockthespot)\\current\"",
-        "",
-        "if (Test-Path \"$blockthespot_path\") {",
-        "    Move-Item -Force \"$dir\\chrome_elf.dll\" -Destination \"$dir\\chrome_elf.dll.original\"",
-        "    Copy-Item \"$blockthespot_path\\chrome_elf.dll\" -Destination \"$dir\"",
-        "    if (-not (Get-Content -ErrorAction Ignore \"$dir\\config.ini\")) { Copy-Item \"$blockthespot_path\\config.ini\" -Destination \"$dir\" }",
-        "}"
+        "if (Test-Path $(appdir blockthespot)) { blockthespot }"
     ],
     "uninstaller": {
         "script": [
