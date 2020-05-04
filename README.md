@@ -61,13 +61,17 @@ which requires Open Sans and Raleway to be installed:
 	$ spicetify apply
 
 To install spicetify-cli and apply a theme silently, the theme can be configured before installing
-spicetify-themes. When spicetify-theme is installed, the current configuration is applied,
-and if Spotify is not opened before it is installed, then Spotify is automatically killed after the
-configuration is applied:
+spicetify-themes. When any of the Spicetify packages are installed, the current configuration
+is applied, and if Spotify was open previously, it is reopened.
 
 	$ scoop install spicetify-cli
-	$ spicetify config current_theme Nord
+	$ spicetify config current_theme Elementary
 	$ scoop install spicetify-themes
+
+[genius-spicetify](https://github.com/khanhas/genius-spicetify) can be installed to fetch lyrics
+from Genius or Musixmatch:
+
+	$ scoop install genius-spicetify
 
 BlockTheSpot can be installed to block advertisements:
 
@@ -76,7 +80,8 @@ BlockTheSpot can be installed to block advertisements:
 All of the above packages can be updated through Scoop.
 
 If you don't care about reading any of this and just want a quick way to install ad-blocked Spotify
-with the Elementary theme, copy and paste this into PowerShell:
+with the Elementary theme, genius-spicetify and developer tools, copy and paste this into
+PowerShell:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
@@ -85,13 +90,15 @@ scoop install git sudo
 scoop bucket add nerd-fonts
 scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 sudo scoop install spotify-latest Open-Sans Raleway
-scoop install blockthespot spicetify-cli
+scoop install spicetify-cli
 spicetify config current_theme Elementary
-scoop install spicetify-themes
+scoop install spicetify-themes genius-spicetify
+spicetify enable-devtool
+scoop install blockthespot
 ```
 
-As you can see above, the theme is configured before it is actually installed.
-When `spicetify-themes` is installed, the theme will automatically be applied.
+The reason BlockTheSpot is installed last above is because running `spicetify enable-devtool` would
+reset it otherwise, which would require `blockthespot` to be run additionally at the end.
 
 ## Notes
 
@@ -104,7 +111,10 @@ When `spicetify-themes` is installed, the theme will automatically be applied.
 * This blocks advertisements for the latest version of Spotify.
 * BlockTheSpot depends on `spotify-latest` and should thus be installed locally.
 * This is not an executable program. `spotify-latest` will be patched automatically every time this
-package is installed or updated.
+package or any of the Spicetify packaages are installed or updated.
+* If BlockTheSpot is ever reset, `blockthespot` can be run to reapply it. This usually happens
+after running Spicetify commands, and running `spicetify-apply` rather than `spicetify apply`
+ensures that BlockTheSpot is enabled if it is installed.
 
 ### Corsair iCUE
 
@@ -131,11 +141,19 @@ Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
 * It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
 to be installed separately.
 
+### genius-spicetify
+
+* genius-spicetify should be installed locally and not globally.
+* genius-spicetify requires Spotify to be installed.
+* Installing or updating genius-spicetify automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
+
 ### google-spicetify
 
 * google-spicetify should be installed locally and not globally.
 * google-spicetify requires Spotify to be installed.
-* Installing or updating google-spicetify automatically applies the spicetify configuration.
+* Installing or updating google-spicetify automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
 
 ### Luyten
 
@@ -160,17 +178,23 @@ are automatically registered.
 
 * spicetify-cli should be installed locally and not globally.
 * spicetify-cli requires Spotify to be installed.
-* Installing or updating spicetify-cli automatically applies the spicetify configuration.
+* Installing or updating this package automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
 * Experimental features and all
 [default extensions](https://github.com/khanhas/spicetify-cli/wiki/Extensions) apart from
 Auto Skip Videos and Trash Bin are enabled by default.
+* `spicetify-apply` is should be run instead of `spicetify apply` if BlockTheSpot is installed, as
+it ensures that BlockTheSpot is enabled if it is installed.
+* It should be noted that `spicetify-apply` also runs `spicetify restore` and `spicetify backup`
+before running `spicetify apply` to ensure that changes are applied.
 
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
 * spicetify-themes requires Spotify to be installed.
 spicetify-cli is declared as a dependency and is installed automatically.
-* Installing or updating spicetify-themes automatically applies the spicetify configuration.
+* Installing or updating this package automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
@@ -197,6 +221,8 @@ $ sudo scoop install Ubuntu-NF
 which can be done most easily using `sudo`.
 * However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
 * This cannot be installed concurrently with `spotify-latest`.
+* Installing or updating this package automatically applies the Spicetify configuration if it is
+installed.
 
 ### Spotify (latest)
 
@@ -206,6 +232,8 @@ this version installs completely silently and to the Scoop directory.
 * Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
 * Spotify should be installed locally and not globally.
 * This cannot be installed concurrently with `spotify-blockthespot`.
+* Installing or updating this package automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
 
 ### QTTabBar
 

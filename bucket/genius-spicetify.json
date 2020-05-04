@@ -16,6 +16,7 @@
             "    exit 1",
             "}",
             "",
+            "# TODO persist MusixMatch token",
             "Remove-Item -ErrorAction Ignore -Recurse \"$env:USERPROFILE\\.spicetify\\CustomApps\\genius\"",
             "Copy-Item -Recurse \"$dir\\genius-spicetify-master\" -Destination \"$env:USERPROFILE\\.spicetify\\CustomApps\\genius\"",
             "",
