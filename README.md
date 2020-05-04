@@ -148,9 +148,10 @@ to be installed separately.
 * Installing or updating genius-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * It should be noted that this is installed to `~\.spicetify\CustomApps` and not the `CustomApps`
-directory in the installation directory.
+directory in the spicetify-cli installation directory.
 * See [here](https://github.com/khanhas/genius-spicetify#musicxmatch) to configure a custom
-Musixmatch user token.
+Musixmatch user token. `manifest.json` can be found at
+`~\.spicetify\CustomApps\genius\manifest.json`.
 
 ### google-spicetify
 
@@ -159,7 +160,7 @@ Musixmatch user token.
 * Installing or updating google-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
-directory in the installation directory.
+directory in the spicetify-cli installation directory.
 
 ### Luyten
 
@@ -202,7 +203,7 @@ spicetify-cli is declared as a dependency and is installed automatically.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
-directory in the installation directory.
+directory in the spicetify-cli installation directory.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
