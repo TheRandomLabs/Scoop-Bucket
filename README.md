@@ -147,6 +147,10 @@ to be installed separately.
 * genius-spicetify requires Spotify to be installed.
 * Installing or updating genius-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
+* It should be noted that this is installed to `~\.spicetify\CustomApps` and not the `CustomApps`
+directory in the installation directory.
+* See [here](https://github.com/khanhas/genius-spicetify#musicxmatch) to configure a custom
+Musixmatch user token.
 
 ### google-spicetify
 
@@ -154,6 +158,8 @@ preserves BlockTheSpot if it is installed.
 * google-spicetify requires Spotify to be installed.
 * Installing or updating google-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
+* It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
+directory in the installation directory.
 
 ### Luyten
 
@@ -195,6 +201,8 @@ before running `spicetify apply` to ensure that changes are applied.
 spicetify-cli is declared as a dependency and is installed automatically.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
+* It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
+directory in the installation directory.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
