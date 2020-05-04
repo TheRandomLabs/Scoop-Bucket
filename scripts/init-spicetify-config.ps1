@@ -7,7 +7,7 @@ if (-not (Test-Path "$env:APPDATA\Spotify\prefs")) {
     Set-Content "$env:APPDATA\Spotify\prefs" "app.last-launched-version=`"$spotify_version`""
 }
 
-Stop-Process -Name Spotify
+Stop-Process -ErrorAction Ignore -Name Spotify
 
 $config_exists = Test-Path "$env:USERPROFILE\.spicetify\config.ini"
 
