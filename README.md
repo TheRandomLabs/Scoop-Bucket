@@ -187,7 +187,7 @@ are automatically registered.
 * spicetify-cli requires Spotify to be installed.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
-* Experimental features and all
+* Experimental features, fast user switching and all
 [default extensions](https://github.com/khanhas/spicetify-cli/wiki/Extensions) apart from
 Auto Skip Videos and Trash Bin are enabled by default.
 * `spicetify-apply` is should be run instead of `spicetify apply` if BlockTheSpot is installed, as
