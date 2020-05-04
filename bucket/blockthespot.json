@@ -10,13 +10,13 @@
         "script": [
             "$null, $bucket = find_manifest($app)",
             "$bucketdir = Find-BucketDirectory($bucket)",
-            "Copy-Item \"$bucketdir\\..\\scripts\\blockthespot.bat\" -Destination \"$dir\\blockthespot.bat\"",
-            "& \"$dir\\blockthespot.bat\""
+            "Copy-Item \"$bucketdir\\..\\scripts\\blockthespot.ps1\" -Destination \"$dir\\blockthespot.ps1\"",
+            "& \"$dir\\blockthespot.ps1\""
         ]
     },
     "uninstaller": {
         "script": [
-            "$spotify_running = Get-Process Spotify -ErrorAction SilentlyContinue",
+            "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "Stop-Process -ErrorAction Ignore -Name Spotify | Out-Null",
             "",
             "$spotify_dir = \"$(appdir spotify-latest)\\current\"",
@@ -26,13 +26,7 @@
             "if ($spotify_running) { Start-Process \"$spotify_dir\\Spotify.exe\" }"
         ]
     },
-    "bin": "blockthespot.bat",
-    "shortcuts": [
-        [
-            "blockthespot.bat",
-            "Install BlockTheSpot"
-        ]
-    ],
+    "bin": "blockthespot.ps1",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/mrpond/BlockTheSpot/releases/download/$version/chrome_elf.zip"
