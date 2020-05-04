@@ -18,7 +18,7 @@
             "",
             "$genius_dir = \"$env:USERPROFILE\\.spicetify\\CustomApps\\genius\"",
             "",
-            "# Persist MusixMatch token",
+            "# Persist Musixmatch token",
             "if (Test-Path \"$genius_dir\\manifest.json\") { $musixmatchToken = (Select-String -Path \"$genius_dir\\manifest.json\" -Pattern 'UserToken.*\"(\\w*)\"' | Select-Object -First 1).Matches[0].Groups[1].Value }",
             "",
             "Remove-Item -ErrorAction Ignore -Recurse \"$genius_dir\"",
