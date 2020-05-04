@@ -28,20 +28,18 @@
         ]
     },
     "post_install": [
+        "if (Test-Path \"$(appdir spicetify-cli)\") {",
+        "    spicetify config spotify_path \"$(Split-Path $(scoop which Spotify))\" --quiet",
+        "    spicetify restore backup apply --quiet --no-restart",
+        "}",
+        "",
         "$blockthespot_path = \"$(appdir blockthespot)\\current\"",
         "",
         "if (Test-Path \"$blockthespot_path\") {",
         "    Move-Item -Force \"$dir\\chrome_elf.dll\" -Destination \"$dir\\chrome_elf.dll.original\"",
         "    Copy-Item \"$blockthespot_path\\chrome_elf.dll\" -Destination \"$dir\"",
         "    if (-not (Get-Content -ErrorAction Ignore \"$dir\\config.ini\")) { Copy-Item \"$blockthespot_path\\config.ini\" -Destination \"$dir\" }",
-        "}",
-        "",
-        "if (-not (Test-Path \"$(appdir spicetify-cli)\")) {",
-        "    return",
-        "}",
-        "",
-        "spicetify config spotify_path \"$(Split-Path $(scoop which Spotify))\" --quiet",
-        "spicetify restore backup apply --quiet --no-restart"
+        "}"
     ],
     "uninstaller": {
         "script": [
