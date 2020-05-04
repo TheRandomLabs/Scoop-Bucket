@@ -111,7 +111,7 @@ reset it otherwise, which would require `blockthespot` to be run additionally at
 * This blocks advertisements for the latest version of Spotify.
 * BlockTheSpot depends on `spotify-latest` and should thus be installed locally.
 * This is not an executable program. `spotify-latest` will be patched automatically every time this
-package or any of the Spicetify packaages are installed or updated.
+package or any of the Spicetify packages are installed or updated.
 * If BlockTheSpot is ever reset, `blockthespot` can be run to reapply it. This usually happens
 after running Spicetify commands, and running `spicetify-apply` rather than `spicetify apply`
 ensures that BlockTheSpot is enabled if it is installed.
