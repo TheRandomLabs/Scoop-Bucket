@@ -42,14 +42,14 @@ I can recommend the
 theme, which can be applied by running the following:
 
 	$ spicetify config current_theme Adapta-Nokto
-	$ spicetify apply
+	$ spicetify-apply
 
 I can also recommend the
 [Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord) theme,
 which can be applied by running the following:
 
 	$ spicetify config current_theme Nord
-	$ spicetify apply
+	$ spicetify-apply
 
 I also like the
 [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
@@ -58,7 +58,7 @@ which requires Open Sans and Raleway to be installed:
 	$ scoop bucket add nerd-fonts
 	$ sudo scoop install Open-Sans Raleway
 	$ spicetify config current_theme Elementary
-	$ spicetify apply
+	$ spicetify-apply
 
 To install spicetify-cli and apply a theme silently, the theme can be configured before installing
 spicetify-themes. When any of the Spicetify packages are installed, the current configuration
