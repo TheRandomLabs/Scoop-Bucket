@@ -44,24 +44,24 @@
             "$spotify_running = Get-Process Spotify -ErrorAction SilentlyContinue",
             "",
             "spicetify config spotify_path \"$(Split-Path $spotify_path)\" --quiet",
-            "spicetify restore --quiet # If a backup has already been made, restore it first",
-            "spicetify backup apply --quiet",
             "",
-            "if (-not $spotify_running) {",
-            "    ($job = Start-Job {",
-            "        while ($spotify_process -eq $null) {",
-            "            Start-Sleep -Milliseconds 250",
-            "            $spotify_process = Get-Process | Where-Object { $_.name -eq 'Spotify' }",
-            "        }",
-            "",
-            "        $spotify_process | ForEach-Object { Stop-Process -Id $_.Id }",
-            "    }) | Out-Null",
-            "",
-            "    $job | Wait-Job -Timeout 5 | Out-Null",
-            "    $job.StopJob()",
+            "if ($spotify_running) {",
+            "    spicetify restore backup apply --quiet",
+            "} else {",
+            "    spicetify restore backup apply --quiet --no-restart",
             "}"
         ]
     },
+    "post_installer": [
+        "$spotify_path = \"$(appdir spotify-latest)\\current\"",
+        "$blockthespot_path = \"$(appdir blockthespot)\\current\"",
+        "",
+        "if (Test-Path \"$spotify_path\" -and Test-Path \"$blockthespot_path\") {",
+        "    Move-Item -Force \"$spotify_path\\chrome_elf.dll\" -Destination \"$spotify_path\\chrome_elf.dll.original\"",
+        "    Copy-Item \"$blockthespot_path\\chrome_elf.dll\" -Destination \"$spotify_path\"",
+        "    if (-not (Get-Content -ErrorAction Ignore \"$spotify_path\\config.ini\")) { Copy-Item \"$blockthespot_path\\config.ini\" -Destination \"$spotify_path\" }",
+        "}"
+    ],
     "uninstaller": {
         "script": "Get-ChildItem \"$dir\" | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\" }"
     },
