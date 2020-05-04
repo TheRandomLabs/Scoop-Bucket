@@ -55,12 +55,21 @@
             "}",
             "",
             "if ($spotify_running) {",
-            "   & \"$spotify_dir\\Spotify.exe\"",
+            "   & \"$spotify_path\"",
             "}"
         ]
     },
     "uninstaller": {
-        "script": "& \"$dir\\spicetify.exe\" restore"
+        "script": [
+            "$spotify_running = Get-Process Spotify -ErrorAction SilentlyContinue",
+            "Stop-Process -Name Spotify",
+            "",
+            "spicetify restore --quiet --no-restart",
+            "",
+            "if ($spotify_running) {",
+            "   & \"$(scoop which Spotify)\"",
+            "}"
+        ]
     },
     "bin": "spicetify.exe",
     "checkver": {

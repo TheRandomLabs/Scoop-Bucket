@@ -57,7 +57,7 @@
             "}",
             "",
             "if ($spotify_running) {",
-            "   & \"$spotify_dir\\Spotify.exe\"",
+            "   & \"$spotify_path\"",
             "}"
         ]
     },
