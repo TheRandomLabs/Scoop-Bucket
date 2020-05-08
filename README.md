@@ -15,7 +15,7 @@ here if there is something that is likely to make them unfit for any of the know
 [separate bucket](https://github.com/TheRandomLabs/Scoop-Spotify). Sorry for the inconvenience!
 Run the following command in PowerShell to migrate:**
 
-	$ "blockthespot", "genius-spicetify", "google-spicetify", "spicetify-cli", "spicetify-themes", "spotify-latest", "spotify-with-blockthespot" | ForEach-Object { $prefix = scoop prefix $_; if ($prefix) { (Get-Content "$prefix\install.json").Replace('TheRandomLabs', 'spotify') | Set-Content "$prefix\install.json" }}
+	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git; "blockthespot", "genius-spicetify", "google-spicetify", "spicetify-cli", "spicetify-themes", "spotify-latest", "spotify-with-blockthespot" | ForEach-Object { $prefix = scoop prefix $_; if ($prefix) { (Get-Content "$prefix\install.json").Replace('TheRandomLabs', 'spotify') | Set-Content "$prefix\install.json" }}
 
 ## Notes
 
