@@ -12,7 +12,7 @@ here if there is something that is likely to make them unfit for any of the know
 	$ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 
 **The Spotify/Spicetify packages have been moved to a
-[separate bucket](https://github.com/TheRandomLabs/Scoop-Spotify). Sorry for the inconvenience.**
+[separate bucket](https://github.com/TheRandomLabs/Scoop-Spotify). Sorry for the inconvenience!**
 
 ## Notes
 
@@ -73,6 +73,8 @@ are automatically registered.
 ### ShellExView
 
 * This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
+* I've only added this to my bucket because I don't want to add the entire NirSoft bucket for one
+package.
 
 ### Win10 Initial Setup Script
 
