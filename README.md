@@ -50,24 +50,29 @@ to be installed separately.
 * I'll PR this to the `extras` bucket once
 [deathmarine/Luyten#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
 
+### Minecraft
+
+* I'm just testing to see if autoupdate works for the Minecraft launcher. If it does, I'll pull
+request this version to the `games` bucket.
+
 ### MuseScore Nightly with File Associations
 
 * This is identical to `musescore-nightly` in the `versions` bucket, except that file associations
 are automatically registered.
-* This is a concept that I'd like to eventually expand to other manifests.
+* This will most likely be rendered obsolete in a future version of Scoop.
 
 ### Neovim Dev
 
 * This is the same as `neovim-nightly` in the `versions` bucket, except that autoupdate is enabled.
 
-### ShellExView
-
-* This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
-
 ### QTTabBar
 
 * The installer shows a dialog that requires user interaction.
 * The installer may show an error related to start menu items. This can be safely ignored.
+
+### ShellExView
+
+* This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
 
 ### Win10 Initial Setup Script
 
