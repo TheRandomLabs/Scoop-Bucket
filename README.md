@@ -73,6 +73,16 @@ are automatically registered.
 * The installer shows a dialog that requires user interaction.
 * The installer may show an error related to start menu items. This can be safely ignored.
 
+### scoop-completion
+
+* If you're getting errors, [run](https://github.com/lukesampson/scoop/issues/3528):
+
+```powershell
+$ scoop config alias @{ }
+```
+
+* The module is only automatically appended to the local `$PROFILE`.
+
 ### ShellExView
 
 * This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
