@@ -53,11 +53,6 @@ to be installed separately.
 * I'll PR this to the `extras` bucket once
 [deathmarine/Luyten#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
 
-### Minecraft
-
-* I'm just testing to see if autoupdate works for the Minecraft launcher. If it does, I'll pull
-request this version to the `games` bucket.
-
 ### MuseScore Nightly with File Associations
 
 * This is identical to `musescore-nightly` in the `versions` bucket, except that file associations
@@ -72,6 +67,15 @@ are automatically registered.
 
 * The installer shows a dialog that requires user interaction.
 * The installer may show an error related to start menu items. This can be safely ignored.
+
+### raylib
+
+* This is mainly here for the purpose of compiling rFXGen.
+
+### rFXGen
+
+* This downloads and builds the latest version of rFXGen ONE from the
+[master branch](https://github.com/raysan5/rfxgen).
 
 ### scoop-completion
 
