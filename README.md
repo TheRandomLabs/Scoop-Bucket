@@ -11,11 +11,8 @@ here if there is something that is likely to make them unfit for any of the know
 
 	$ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 
-**The Spotify/Spicetify packages have been moved to a
-[separate bucket](https://github.com/TheRandomLabs/Scoop-Spotify). Sorry for the inconvenience!
-Run the following command in PowerShell to migrate:**
-
-	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git; "blockthespot", "genius-spicetify", "google-spicetify", "spicetify-cli", "spicetify-themes", "spotify-latest", "spotify-with-blockthespot" | ForEach-Object { $prefix = scoop prefix $_; if ($prefix) { (Get-Content "$prefix\install.json").Replace('TheRandomLabs', 'spotify') | Set-Content "$prefix\install.json" }}
+Also check out my [Spotify/Spicetify bucket](https://github.com/TheRandomLabs/Scoop-Spotify)
+and my [Python bucket](https://github.com/TheRandomLabs/Scoop-Python)!
 
 ## Notes
 
