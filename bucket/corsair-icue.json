@@ -18,9 +18,9 @@
             "# }",
             "",
             "Start-Process -Wait msiexec \"/i `\"$dir\\setup.msi_`\" /qn INSTALLFOLDER=`\"$dir`\"\" -Verb RunAs",
-            "Remove-Item \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Corsair\\iCUE.lnk\"",
+            "Remove-Item \"$([Environment]::GetFolderPath('commonstartmenu'))\\Corsair\\iCUE.lnk\"",
             "# If the Corsair directory is empty, delete it",
-            "Remove-Item -ErrorAction Ignore \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Corsair\""
+            "Remove-Item -ErrorAction Ignore \"$([Environment]::GetFolderPath('commonstartmenu'))\\Corsair\""
         ]
     },
     "uninstaller": {
