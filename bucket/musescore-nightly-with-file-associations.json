@@ -26,17 +26,17 @@
     },
     "bin": [
         [
-            "bin\\MuseScore4.exe",
+            "bin\\nightly.exe",
             "MuseScore"
         ],
         [
-            "bin\\MuseScore4.exe",
+            "bin\\nightly.exe",
             "mscore"
         ]
     ],
     "shortcuts": [
         [
-            "bin\\MuseScore4.exe",
+            "bin\\nightly.exe",
             "MuseScore"
         ]
     ],
