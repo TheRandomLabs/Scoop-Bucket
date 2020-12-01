@@ -60,11 +60,6 @@ are automatically registered.
 
 * This is the same as `neovim-nightly` in the `versions` bucket, except that autoupdate is enabled.
 
-### QTTabBar
-
-* The installer shows a dialog that requires user interaction.
-* The installer may show an error related to start menu items. This can be safely ignored.
-
 ### raylib
 
 * This is mainly here for the purpose of compiling rFXGen.
