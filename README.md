@@ -69,16 +69,6 @@ are automatically registered.
 * This downloads and builds the latest version of rFXGen ONE from the
 [master branch](https://github.com/raysan5/rfxgen).
 
-### scoop-completion
-
-* If you're getting errors, [run](https://github.com/lukesampson/scoop/issues/3528):
-
-```powershell
-$ scoop config alias @{ }
-```
-
-* The module is only automatically appended to the local `$PROFILE`.
-
 ### ShellExView
 
 * This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
