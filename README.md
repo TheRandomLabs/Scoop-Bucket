@@ -22,17 +22,18 @@ and my [Python bucket](https://github.com/TheRandomLabs/Scoop-Python)!
 
 ### Corsair iCUE
 
-* `scoop uninstall corsair-icue` should not be run as administrator until
-[this](https://github.com/lukesampson/scoop/issues/2952#issuecomment-542531849) is resolved.
-* This means that `scoop update corsair-icue` also cannot be run as administrator and will show
-two UAC dialogs.
-* Alternatively, the following commands can be run prior to running
-`scoop uninstall corsair-icue` or `scoop update corsair-icue` as administrator:
+* The following commands should be run prior to running
+`scoop uninstall corsair-icue` or `scoop update corsair-icue` as administrator in order to kill
+any processes that may impede the uninstallation:
 
 ```powershell
 $icue_path = "$(Split-Path(scoop prefix corsair-icue))\*"
 Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
+Stop-Process -Name CueLLAccessService -Force
 ```
+
+* Alternatively, running the above commands without administrator privileges will cause Scoop to
+not detect that the processes are running, allowing uninstallation to continue normally.
 
 ### Custom Resolution Utility
 
