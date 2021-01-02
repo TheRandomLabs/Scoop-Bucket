@@ -76,6 +76,10 @@ are automatically registered.
 * I've only added this to my bucket because I don't want to add the entire NirSoft bucket for one
 package.
 
+### VisualVM
+
+* I couldn't get this merged in `extras`. 😛
+
 ### Win10 Initial Setup Script
 
 * This is a PowerShell script for the automation of routine setup tasks completed on fresh
