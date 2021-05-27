@@ -12,11 +12,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip",
-            "hash": "a35a194b06eec91be32187baed9a7aa4b6962bb0a4204113a6fe44b5f6fb12d0"
+            "hash": "d4920bca1e0acf62bd6d9deaf6cfd3c359988b75cfbeac9c98fcc7012e739ca3"
         },
         "32bit": {
             "url": "https://github.com/neovim/neovim/releases/download/nightly/nvim-win32.zip",
-            "hash": "fe57b327fd4d82444355bf1479fd4ea00161c04a4a3e126ddb1d964bf6adbb67"
+            "hash": "499925912446c4835cb729672c5f36644a6ffb0bb8b4dceac2f9c6b9e4616151"
         }
     },
     "extract_dir": "Neovim",
