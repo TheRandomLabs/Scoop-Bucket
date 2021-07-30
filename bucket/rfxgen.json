@@ -8,7 +8,7 @@
         "raylib"
     ],
     "url": "https://github.com/raysan5/rfxgen/archive/master.zip",
-    "hash": "5b12e3117de7a8a6acd3f04d61574c02f2ab4cb32d121443444f6031cef84ba1",
+    "hash": "01c0a70d3326ca27bb5d8876ea11cfcef8a5641e63131aed56bfb86d2ed3a043",
     "installer": {
         "script": [
             "Push-Location \"$dir\\rfxgen-master\\src\"",
