@@ -1,10 +1,10 @@
 {
-    "version": "4.17.244",
+    "version": "4.18.209",
     "description": "Tool for the customization of functions on Corsair peripherals and components.",
     "homepage": "https://www.corsair.com/us/en/icue",
     "license": "Freeware",
-    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_4.17.244_release.msi#/setup.msi_",
-    "hash": "aa2bee58415a2168d724a46e5c7f97a8edbc05ef623e9e8a66fa67859d267c0e",
+    "url": "http://downloads.corsair.com/Files/CUE/iCUESetup_4.18.209_release.msi#/setup.msi_",
+    "hash": "7ead2a997f13db8c299ec5d494c433e6cdb4fae01402048c4aa11e58087a4ebe",
     "notes": [
         "Run the following PowerShell commands as administrator to disable the Corsair Service and Corsair LLA Service from starting automatically:",
         "Set-Service -Name CorsairService -StartupType Manual",
